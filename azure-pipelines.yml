@@ -11,10 +11,10 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: Use Latest .NET Core 3.1 SDK
+  displayName: Use Latest .NET 7.0 SDK
   inputs:
     packageType: 'sdk'
-    version: '3.1.201'
+    version: '7.0.0'
 
 - task: DotNetCoreCLI@2
   displayName: Publish App
@@ -38,7 +38,7 @@ steps:
     git checkout -b gh-pages
     git add -A
     git commit -m "Create build $(Build.BuildId)"
-    git push -f https://$PAT@github.com/fernandreu/blazor-pages.git gh-pages
+    git push -f https://$PAT@github.com/Tudi20/ResumeApp.git gh-pages
   displayName: 'Publish to GitHub Pages'
   env:
     PAT: $(GitHubPAT)
