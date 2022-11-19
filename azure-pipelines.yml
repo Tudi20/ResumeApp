@@ -14,7 +14,7 @@ steps:
   displayName: Use Latest .NET 7.0 SDK
   inputs:
     packageType: 'sdk'
-    version: '7.0.0'
+    version: '7.0.x'
 
 - task: DotNetCoreCLI@2
   displayName: Publish App
