@@ -27,13 +27,13 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifacts'
   inputs:
-    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    pathtoPublish: $(Build.ArtifactStagingDirectory)/ResumeApp
     artifactName: 'Dist'
 
 - script: |
     git config --global user.name "$NAME"
     git config --global user.email "$EMAIL"
-    cd $(Build.ArtifactStagingDirectory)/wwwroot
+    cd $(Build.ArtifactStagingDirectory)/ResumeApp/wwwroot
     git init
     git checkout -b gh-pages
     git add -A
