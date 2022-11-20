@@ -5,7 +5,12 @@
         <div class="max">
             <h6>(@DateString) @Education.School</h6>
             <p>@Education.Degree</p>
-            <p>@Education.Description</p>
+            @if (Education.Description != null)
+            {
+                <p>
+                    @((MarkupString)Education.Description)
+                </p>
+            }
         </div>
 
     </div>
@@ -16,7 +21,7 @@ else
 }
 @code {
     public string IconColorClassCss = "orange-text";
-    public string? DateString; 
+    public string? DateString;
     
     [Parameter]
     public ResumeEducationModel? Education { get; set; }
