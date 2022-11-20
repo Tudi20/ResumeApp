@@ -79,3 +79,7 @@ a, .btn-link {
 #app-loading-progress-text:after {
     content: var(--blazor-load-percentage-text, "Loading");
 }
+
+article > details > div {
+    padding-top: 16rem;
+}
