@@ -1,4 +1,6 @@
-﻿namespace ResumeApp.Models;
+﻿using Microsoft.AspNetCore.Components;
+
+namespace ResumeApp.Models;
 
 public record ResumeModel
 {
