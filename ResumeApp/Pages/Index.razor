@@ -1,7 +1,66 @@
 ﻿@page "/"
+@using ResumeApp.Components.Resume
+@inject HttpClient Http
 
-<PageTitle>Index</PageTitle>
+@if (ResumeData == null)
+{
+    <PageTitle>Resume is loading...</PageTitle>
+    <a class="loader little-padding" role="status">
+        <span class="tiny no-opacity">Loading...</span>
+    </a>
+}
+else
+{
+    <article class="primary-container">
+        <PageTitle>Resume of @ResumeData.Basics.Name</PageTitle>
+        <ResumeBasics Basics="ResumeData.Basics" />
+        <article>
+            <details>
+                <ResumeListDetailsSummary Icon="school" Title="Education" />
+                <div>
+                    @foreach (var education in ResumeData.Education)
+                    {
+                        <ResumeEducation Education="education" />
+                    }
+                </div>
+            </details>
+        </article>
+        @if (ResumeData.Certificates != null)
+        {
+            <article>
+                <details>
+                    <ResumeListDetailsSummary Icon="card_membership" Title="Certificates" />
+                    <div>
+                        @foreach (var certificate in ResumeData.Certificates)
+                        {
+                            <ResumeCertification Certification="certificate" />
+                        }
+                    </div>
+                </details>
+            </article>
+        }
+        else
+        {
+            <!-- Certifications are not available -->
+        }
+        <article>
+            <details>
+                <ResumeListDetailsSummary Icon="language" Title="Languages" />
+                <div>
+                    @foreach (var language in ResumeData.Languages)
+                    {
+                        <ResumeLanguage Language="language" />
+                    }
+                </div>
+            </details>
+        </article>
+    </article>
+}
+@code {
+    public ResumeModel? ResumeData { get; set; }
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+    protected override async Task OnInitializedAsync()
+    {
+        ResumeData = await Http.GetFromJsonAsync<ResumeModel>("data/resume.json");
+    }
+}
