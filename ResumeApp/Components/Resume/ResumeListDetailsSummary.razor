@@ -1,17 +1,25 @@
-﻿<summary class="none">
+﻿<summary class="none" @onclick="SwitchArrow">
     <div class="row">
         <i>@Icon</i>
         <div class="max">
             <h5>@Title</h5>
         </div>
-        <i class="right">arrow_drop_down</i>
+        <i class="right">@DropArrowIcon</i>
     </div>
 </summary>
 
 @code {
+    
+    public string DropArrowIcon { get; set; } = "arrow_drop_down";
+    
     [Parameter]
     public string? Icon { get; set; }
     
     [Parameter]
     public string? Title { get; set; }
+    
+    public void SwitchArrow()
+    {
+        DropArrowIcon = DropArrowIcon == "arrow_drop_down" ? "arrow_drop_up" : "arrow_drop_down";
+    }
 }
