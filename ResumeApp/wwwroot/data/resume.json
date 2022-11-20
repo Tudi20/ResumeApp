@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Kláben Szabolcs Bence",
-    "label": "Software Developer",
+    "label": "Looking for Job as Software Developer, Software Tester, DevOps, or in R&D.",
     "picture": "pictures/pfp.jpg",
     "email": "klaben.szabolcs@gmail.com",
     "birthDate": "2000-05-20"
@@ -13,7 +13,7 @@
       "graduated": true,
       "startDate": "2019-09-01",
       "endDate": "2022-09-16",
-      "description": "I graduated with a degree in Software Information Technology. I have taken courses in C, C#, HTML, CSS, JS, SQL, and more."
+      "description": "I have taken courses in C, C#, HTML, CSS, JS, SQL, and more. As my Thesis I have partially ported HTML5 Canvas from JS to C. I have branched into Web Technologies."
     },
     {
       "school": "Andrássy Gyula Vocational High School",
@@ -21,7 +21,7 @@
       "graduated": true,
       "startDate": "2015-09-01",
       "endDate": "2019-06-21",
-      "description": "I graduated with a vocational matura. I have taken courses in C#, HTML, CSS, SQL, and more."
+      "description": "I have taken courses in C# (CLI, WinForms), HTML, CSS, SQL, and more.<br /> I have created a basic website in PHP, which can be found at <a href='https://uses.atw.hu/kapszy-ttki' target='_blank'>https://uses.atw.hu/kapszy-ttki</a>. To login as a guest use <code>guest@example.com</code> and <code>guest001</code> as login creditentals."
     },
     {
       "school": "Saint Francis of Assisi Roman Catcholic Primary School of Diósgyőr",
@@ -29,7 +29,7 @@
       "graduated": true,
       "startDate": "2007-06-01",
       "endDate": "2015-06-15",
-      "description": "I graduated from primary school. I have taken extra-curricular classes in Pascal, Imagine Logo, PHP, HTML, CSS, and SQL."
+      "description": "I have taken extra-curricular classes in Pascal, Imagine Logo, PHP, HTML, CSS, and SQL. Furthermore I have partaken in competetions."
     }
   ],
   "certificates": [
