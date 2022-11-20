@@ -1,0 +1,35 @@
+﻿@if (Language != null)
+{
+    <div class="row">
+        <h5>@Language.Emoji</h5>
+        <div class="max">
+            <h6>@Language.Name</h6>
+            <p class="@LevelColorClassCss">@Language.Level</p>
+        </div>
+    </div>
+}
+else
+{
+    <!-- Language is not available -->
+}
+@code {
+    public string LevelColorClassCss = "orange-text";
+    
+    [Parameter]
+    public ResumeLanguageModel? Language { get; set; }
+    
+    protected override void OnParametersSet()
+    {
+        if (Language == null) return;
+        LevelColorClassCss = Language.Level switch
+        {
+            "Native" => "light-green-text",
+            "Fluent" => "light-green-text",
+            "Professional" => "yellow-text",
+            "Conversational" => "orange-text",
+            "Limited" => "amber-text",
+            "Elementary" => "pink-text",
+            _ => "grey-text"
+        };
+    }
+}
