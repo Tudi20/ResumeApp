@@ -2,28 +2,10 @@
 @inject BrowserModeService BrowserModeService
 
 <nav class="left tiny-padding elevate m l">
-    <NavLink href="" Match="NavLinkMatch.All">
-        <i>home</i> <span>Home</span>
-    </NavLink>
-    <NavLink  href="resume">
-        <i>description</i> <span>Resume</span>
-    </NavLink>
-    <div class="max"></div>
-    <button class="circle transparent" @onclick="BrowserModeService.ToggleDarkModeAsync">
-        <i>light_mode</i> <span>Toggle Theme</span>
-    </button>
+    <NavItems />
 </nav>
 <nav class="bottom elevate s">
-    <NavLink href="" Match="NavLinkMatch.All">
-        <i>home</i> <span>Home</span>
-    </NavLink>
-    <NavLink  href="resume">
-        <i>description</i> <span>Resume</span>
-    </NavLink>
-    <div class="max"></div>
-    <button class="circle transparent" @onclick="BrowserModeService.ToggleDarkModeAsync">
-        <i>light_mode</i> <span>Toggle Theme</span>
-    </button>
+    <NavItems />
 </nav>
 
 

@@ -1,0 +1,10 @@
+﻿@using ResumeApp.Services
+@inject BrowserModeService BrowserModeService
+
+<NavLink href="" Match="NavLinkMatch.All">
+    <i>home</i> <span>Home</span>
+</NavLink>
+<div class="max"></div>
+<button class="circle transparent" @onclick="BrowserModeService.ToggleDarkModeAsync">
+    <i>light_mode</i> <span>Toggle Theme</span>
+</button>
