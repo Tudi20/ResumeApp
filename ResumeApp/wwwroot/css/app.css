@@ -83,3 +83,9 @@ a, .btn-link {
 article > details > div {
     padding-top: 16rem;
 }
+
+code {
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.4rem;
+}
