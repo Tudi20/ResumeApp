@@ -2,6 +2,14 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+body {
+    --code-text-color: crimson;
+}
+
+body[class="dark"] {
+    --code-text-color: #fff0ff;
+}
+
 html, body, #app {
     height: 100%;
 }
@@ -85,7 +93,7 @@ article > details > div {
 }
 
 code {
-    color: crimson;
-    background-color: #f1f1f1;
+    color: var(--code-text-color, crimson);
     padding: 0.2rem 0.4rem;
+    background-color: var(--surface-variant, #f2f2f2);
 }
