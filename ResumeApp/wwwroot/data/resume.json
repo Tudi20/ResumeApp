@@ -47,11 +47,13 @@
   "languages": [
     {
       "name": "Hungarian",
-      "level": "Native"
+      "level": "Native",
+      "emoji": "🇭🇺"
     },
     {
       "name": "English",
-      "level": "Fluent"
+      "level": "Fluent",
+      "emoji": "🇬🇧"
     }
   ]
 }

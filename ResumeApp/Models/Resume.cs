@@ -38,4 +38,5 @@ public record ResumeLanguageModel
 {
     public required string Name { get; set; }
     public required string Level { get; set; }
+    public required string Emoji { get; set; }
 }
