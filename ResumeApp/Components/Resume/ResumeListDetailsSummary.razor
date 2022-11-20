@@ -1,0 +1,17 @@
+﻿<summary class="none">
+    <div class="row">
+        <i>@Icon</i>
+        <div class="max">
+            <h5>@Title</h5>
+        </div>
+        <i class="right">arrow_drop_down</i>
+    </div>
+</summary>
+
+@code {
+    [Parameter]
+    public string? Icon { get; set; }
+    
+    [Parameter]
+    public string? Title { get; set; }
+}

@@ -16,15 +16,7 @@ else
         <ResumeBasics Basics="ResumeData.Basics" />
         <article>
             <details>
-                <summary class="none">
-                    <div class="row">
-                        <i>school</i>
-                        <div class="max">
-                            <h5>Education</h5>
-                        </div>
-                        <i class="right">arrow_drop_down</i>
-                    </div>
-                </summary>
+                <ResumeListDetailsSummary Icon="school" Title="Education" />
                 <div>
                     @foreach (var education in ResumeData.Education)
                     {
@@ -35,13 +27,17 @@ else
         </article>
         @if (ResumeData.Certificates != null)
         {
-            <div class="certifications">
-            <h1>Certifications</h1>
-            @foreach (var certificate in ResumeData.Certificates)
-            {
-                <ResumeCertification Certification="certificate" />
-            }
-        </div>
+            <article>
+                <details>
+                    <ResumeListDetailsSummary Icon="card_membership" Title="Certificates" />
+                    <div>
+                        @foreach (var certificate in ResumeData.Certificates)
+                        {
+                            <ResumeCertification Certification="certificate"/>
+                        }
+                    </div>
+                </details>
+            </article>
         }
     else
     {
