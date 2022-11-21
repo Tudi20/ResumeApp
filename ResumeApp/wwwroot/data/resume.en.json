@@ -21,7 +21,7 @@
       "graduated": true,
       "startDate": "2015-09-01",
       "endDate": "2019-06-21",
-      "description": "I have taken courses in C# (CLI, WinForms), HTML, CSS, SQL, and more.<br /> I have created a basic website in PHP, which can be found at <a href='https://users.atw.hu/kapszy-ttki' target='_blank'>https://users.atw.hu/kapszy-ttki</a>. To login as a guest use <code>guest@example.com</code> and <code>guest001</code> as login creditentals."
+      "description": "I have taken courses in C# (CLI, WinForms), HTML, CSS, SQL, and more.<br /> I have created a basic website in PHP, which can be found at <a href='https://users.atw.hu/kapszy-ttki' target='_blank'>https://users.atw.hu/kapszy-ttki</a>. To login as a guest use <code>guest@example.com</code> and <code>guest001</code> as login credentials."
     },
     {
       "school": "Saint Francis of Assisi Roman Catcholic Primary School of Diósgyőr",
@@ -54,6 +54,11 @@
       "name": "English",
       "level": "Fluent",
       "emoji": "🇬🇧"
+    },
+    {
+      "name": "Japanese",
+      "level": "Elementary",
+      "emoji": "🇯🇵"
     }
   ]
 }

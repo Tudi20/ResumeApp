@@ -54,6 +54,11 @@
       "name": "Angol",
       "level": "Folyékony",
       "emoji": "🇬🇧"
+    },
+    {
+      "name": "Japán",
+      "level": "Elemi",
+      "emoji": "🇯🇵"
     }
   ]
 }
