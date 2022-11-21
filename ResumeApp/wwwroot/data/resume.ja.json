@@ -1,0 +1,64 @@
+{
+  "basics": {
+    "name": "Kláben Szabolcs Bence",
+    "label": "ソフトウェア開発者、ソフトウェアテスター、DevOps、またはR&Dの仕事を探している。",
+    "picture": "pictures/pfp.jpg",
+    "email": "klaben.szabolcs@gmail.com",
+    "birthDate": "2000-05-20"
+  },
+  "education": [
+    {
+      "school": "ミシュコルツ大学",
+      "degree": "ソフトウェア情報技術における理学士号",
+      "graduated": true,
+      "startDate": "2019-09-01",
+      "endDate": "2022-09-16",
+      "description": "C、C#、HTML、CSS、JS、SQLなどのコースを受講してきました。卒業論文では、HTML5 CanvasをJSからCに部分的に移植しました。"
+    },
+    {
+      "school": "アンドラーシ・ジュラ職業高等学校",
+      "degree": "コンピュータシステム保守のための職業訓練校",
+      "graduated": true,
+      "startDate": "2015-09-01",
+      "endDate": "2019-06-21",
+      "description": "C# (CLI、WinForms)、HTML、CSS、SQLなどのコースを受講したことがあります。<br /> PHPで基本的なウェブサイトを作成したことがあり、そのサイトは<a href='https://users.atw.hu/kapszy-ttki' target='_blank'>https://users.atw.hu/kapszy-ttki</a>。 ゲストとしてログインするには、ログイン認証として <code>guest@example.com</code>と<code>guest001</code>を使用します。"
+    },
+    {
+      "school": "Diósgyőrのアシジローマカトリック小学校の聖フランシスコ",
+      "degree": "小学校",
+      "graduated": true,
+      "startDate": "2007-06-01",
+      "endDate": "2015-06-15",
+      "description": "Pascal、Imagine Logo、PHP、HTML、CSS、SQLの課外授業を受けたことがあります。さらに、コンペティションにも参加したことがあります。"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "英語（CEFR B2）",
+      "date": "2022-08-31",
+      "issuer": "ELTE Origó Nyelvi Centrum Kft."
+    },
+    {
+      "name": "ヨーロッパコンピュータドライビングライセンス（スタンダード）",
+      "date": "2015-07-09",
+      "issuer": "Neumann János Számítógépes Társaság"
+    }
+  ],
+  "languages": [
+    {
+      "name": "ハンガリー語",
+      "level": "母国語",
+      "emoji": "🇭🇺"
+    },
+    {
+      "name": "英語",
+      "level": "流暢",
+      "emoji": "🇬🇧"
+    },
+    {
+      "name": "日本語",
+      "level": "初級",
+      "emoji": "🇯🇵"
+    }
+  ]
+}

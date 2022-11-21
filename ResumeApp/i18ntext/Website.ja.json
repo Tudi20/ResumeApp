@@ -1,0 +1,22 @@
+{
+  "navItems_home": "ホームページ",
+  "navItems_toggleTheme": "トグルのテーマ",
+  "navItems_changeLanguage": "言語を変更する",
+  "index_resumeLoadingPageTitle": "レジュメを読み込んでいます...",
+  "index_resumeLoadingText": "読み込み中...",
+  "index_resumeOf": "レジュメ：",
+  "index_education": "教育",
+  "index_certificates": "証明書",
+  "index_languages": "言語",
+  "resumeBasics_bornOn": "生年月日は",
+  "resumeBasics_email": "電子メールは",
+  "resumeCertification_issuedBy": "発行元は",
+  "resumeCertification_on": "です。日付は",
+  "resumeEducation_present": "今日",
+  "resumeLanguage_native": "母国語",
+  "resumeLanguage_fluent": "流暢",
+  "resumeLanguage_professional": "専門的",
+  "resumeLanguage_conversational": "会話可能",
+  "resumeLanguage_limited": "不十分",
+  "resumeLanguage_elementary": "初級"
+}
