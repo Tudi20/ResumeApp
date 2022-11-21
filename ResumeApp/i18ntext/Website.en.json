@@ -9,6 +9,7 @@
   "index_certificates": "Certificates",
   "index_languages": "Languages",
   "resumeBasics_bornOn": "Born on ",
+  "resumeBasics_email": "Email: ",
   "resumeCertification_issuedBy": "Issued by ",
   "resumeCertification_on": " on ",
   "resumeEducation_present": "Present",
@@ -18,5 +19,4 @@
   "resumeLanguage_conversational": "Conversational",
   "resumeLanguage_limited": "Limited",
   "resumeLanguage_elementary": "Elementary"
-
 }

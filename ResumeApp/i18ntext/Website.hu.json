@@ -9,6 +9,7 @@
   "index_certificates": "Bizonyítványok",
   "index_languages": "Nyelvek",
   "resumeBasics_bornOn": "Születési dátum: ",
+  "resumeBasics_email": "E-mail: ",
   "resumeCertification_issuedBy": "Kiadta ",
   "resumeCertification_on": " ekkor: ",
   "resumeEducation_present": "Jelen",
@@ -18,5 +19,4 @@
   "resumeLanguage_conversational": "Társalgó",
   "resumeLanguage_limited": "Korlátozott",
   "resumeLanguage_elementary": "Elemi"
-
 }
