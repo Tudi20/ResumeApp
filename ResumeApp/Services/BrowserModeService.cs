@@ -1,4 +1,6 @@
 ﻿using Microsoft.JSInterop;
+using System.Globalization;
+
 namespace ResumeApp.Services;
 public class BrowserModeService
 {
@@ -25,5 +27,10 @@ public class BrowserModeService
     public async Task ToggleDarkModeAsync()
     {
         await SetDarkModeAsync(!await GetDarkModeAsync());
+    }
+
+    public async Task CallUiAsync(string action)
+    {
+        await _jsRuntime.InvokeVoidAsync("ui", action);
     }
 }

@@ -1,0 +1,22 @@
+{
+  "navItems_home": "Főoldal",
+  "navItems_toggleTheme": "Téma változtatása",
+  "navItems_changeLanguage": "NYelv változtatása",
+  "index_resumeLoadingPageTitle": "Az önéletrajz töltődik...",
+  "index_resumeLoadingText": "Betöltés...",
+  "index_resumeOf": "Önéletrajz: ",
+  "index_education": "Tanulmányok",
+  "index_certificates": "Bizonyítványok",
+  "index_languages": "Nyelvek",
+  "resumeBasics_bornOn": "Születési dátum: ",
+  "resumeCertification_issuedBy": "Kiadta ",
+  "resumeCertification_on": " ekkor: ",
+  "resumeEducation_present": "Jelen",
+  "resumeLanguage_native": "Anyanyelv",
+  "resumeLanguage_fluent": "Folyékony",
+  "resumeLanguage_professional": "Professzionális",
+  "resumeLanguage_conversational": "Társalgó",
+  "resumeLanguage_limited": "Korlátozott",
+  "resumeLanguage_elementary": "Elemi"
+
+}

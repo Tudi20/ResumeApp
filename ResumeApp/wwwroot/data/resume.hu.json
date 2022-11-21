@@ -1,0 +1,59 @@
+{
+  "basics": {
+    "name": "Kláben Szabolcs Bence",
+    "label": "Munkát keresek szoftverfejlesztőként, szoftvertesztelőként, DevOpsként, vagy R&D-ben.",
+    "picture": "pictures/pfp.jpg",
+    "email": "klaben.szabolcs@gmail.com",
+    "birthDate": "2000-05-20"
+  },
+  "education": [
+    {
+      "school": "Miskolci Egyetem",
+      "degree": "Programtervező informatikus alapfokozat",
+      "graduated": true,
+      "startDate": "2019-09-01",
+      "endDate": "2022-09-16",
+      "description": "Tanfolyamokat végeztem C, C#, HTML, CSS, JS, SQL és sok más nyelveken. Szakdolgozatomként részben portoltam a HTML5 Canvas-t JS-ből C-re. Webes technológiákat választottam választható kötelezőként."
+    },
+    {
+      "school": "Andrássy Gyula Szakgimnázium",
+      "degree": "Számítógépes rendszerkarbantartó szakérettségi",
+      "graduated": true,
+      "startDate": "2015-09-01",
+      "endDate": "2019-06-21",
+      "description": "Tanfolyamokat végeztem C# (CLI, WinForms), HTML, CSS, SQL és más területeken.<br /> Készítettem egy alapszintű weboldalt PHP-ben, amely megtalálható a <a href='https://users.atw.hu/kapszy-ttki' target='_blank'>https://users.atw.hu/kapszy-ttki</a> weboldalon. Vendégként történő bejelentkezéshez használható a <code>guest@example.com</code> és <code>guest001</code> bejelentkezési azonosítóként."
+    },
+    {
+      "school": "Diósgyőri Szent Ferenc Római Katolikus Általános Iskola",
+      "degree": "Általános iskolai bizonyítvány",
+      "graduated": true,
+      "startDate": "2007-06-01",
+      "endDate": "2015-06-15",
+      "description": "Tanórán kívüli órákat vettem Pascal, Imagine Logo, PHP, HTML, CSS és SQL nyelvből. Továbbá részt vettem versenyeken."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Angol (KER B2)",
+      "date": "2022-08-31",
+      "issuer": "ELTE Origó Nyelvi Centrum Kft."
+    },
+    {
+      "name": "Európai Számítógép-használói Jogosítvány",
+      "date": "2015-07-09",
+      "issuer": "Neumann János Számítógépes Társaság"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Magyar",
+      "level": "Anyanyelv",
+      "emoji": "🇭🇺"
+    },
+    {
+      "name": "Angol",
+      "level": "Folyékony",
+      "emoji": "🇬🇧"
+    }
+  ]
+}

@@ -1,4 +1,6 @@
-﻿@if (Language != null)
+﻿@using System.Diagnostics
+@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@if (Language != null)
 {
     <div class="row">
         <h5>@Language.Emoji</h5>
@@ -13,23 +15,27 @@ else
     <!-- Language is not available -->
 }
 @code {
-    public string LevelColorClassCss = "orange-text";
+    I18nText.Website _website = new();
+    
+    public string LevelColorClassCss = "grey-text";
     
     [Parameter]
     public ResumeLanguageModel? Language { get; set; }
     
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+    }
+    
     protected override void OnParametersSet()
     {
         if (Language == null) return;
-        LevelColorClassCss = Language.Level switch
-        {
-            "Native" => "light-green-text",
-            "Fluent" => "light-green-text",
-            "Professional" => "yellow-text",
-            "Conversational" => "orange-text",
-            "Limited" => "amber-text",
-            "Elementary" => "pink-text",
-            _ => "grey-text"
-        };
+        if (Language.Level == _website.resumeLanguage_native) { LevelColorClassCss = "light-green-text"; return;}
+        if (Language.Level == _website.resumeLanguage_fluent) { LevelColorClassCss = "light-green-text"; return; }
+        if (Language.Level == _website.resumeLanguage_professional) { LevelColorClassCss = "yellow-text"; return; }
+        if (Language.Level == _website.resumeLanguage_conversational) { LevelColorClassCss = "orange-text"; return; }
+        if (Language.Level == _website.resumeLanguage_limited) { LevelColorClassCss = "amber-text"; return; }
+        if (Language.Level == _website.resumeLanguage_elementary) { LevelColorClassCss = "pink-text"; return; }
+        LevelColorClassCss = "grey-text";
     }
 }

@@ -1,10 +1,11 @@
-﻿@if (Certification != null)
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@if (Certification != null)
 {
     <div class="row">
         <i>card_membership</i>
         <div class="max">
             <h6>@Certification.Name</h6>
-            <p>Issued by @Certification.Issuer on @Certification.Date</p>
+            <p>@_website.resumeCertification_issuedBy@Certification.Issuer@_website.resumeCertification_on@Certification.Date</p>
         </div>
     </div>
 }
@@ -14,6 +15,13 @@ else
 }
 
 @code {
+    I18nText.Website _website = new();
+    
     [Parameter]
     public ResumeCertificationModel? Certification { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+    }
 }

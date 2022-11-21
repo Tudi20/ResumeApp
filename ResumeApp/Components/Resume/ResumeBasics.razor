@@ -1,4 +1,5 @@
-﻿@if (Basics != null)
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@if (Basics != null)
 {
     <article class="secondary" style="flex-grow: 1">
         <div class="row">
@@ -6,7 +7,7 @@
             <div class="max">
                 <h5>@Basics.Name</h5>
                 <p>@Basics.Label</p>
-                <p>Born on @Basics.BirthDate</p>
+                <p>@_website.resumeBasics_bornOn@Basics.BirthDate</p>
             </div>
         </div>
     </article>
@@ -17,6 +18,13 @@ else
 }
 
 @code {
+    I18nText.Website _website = new();
+    
     [Parameter]
     public ResumeBasicsModel? Basics { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+    }
 }

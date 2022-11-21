@@ -1,4 +1,5 @@
-﻿@if (Education != null)
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@if (Education != null)
 {
     <div class="row">
         <i class="@IconColorClassCss">school</i>
@@ -20,18 +21,25 @@ else
     <!-- Education is not available -->
 }
 @code {
+    I18nText.Website _website = new();
+    
     public string IconColorClassCss = "orange-text";
     public string? DateString;
     
     [Parameter]
     public ResumeEducationModel? Education { get; set; }
     
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+    }
+    
     protected override void OnParametersSet()
     {
         if (Education == null) return;
         IconColorClassCss = Education.Graduated ? "light-green-text" : "orange-text";
         DateString = Education.EndDate == null
-            ? $"{Education.StartDate.Year} - Present"
+            ? $"{Education.StartDate.Year} - {_website.resumeEducation_present}"
             : $"{Education.StartDate.Year} - {Education.EndDate?.Year}";
     }
 }

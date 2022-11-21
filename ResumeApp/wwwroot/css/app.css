@@ -97,3 +97,7 @@ code {
     padding: 0.2rem 0.4rem;
     background-color: var(--surface-variant, #f2f2f2);
 }
+
+#language-dropdown.active {
+    transform: translateY(0);
+}

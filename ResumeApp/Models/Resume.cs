@@ -32,7 +32,7 @@ public record ResumeEducationModel
 public record ResumeCertificationModel
 {
     public required string Name { get; set; }
-    public required string Date { get; set; }
+    public required DateOnly Date { get; set; }
     public required string Issuer { get; set; }
 }
 

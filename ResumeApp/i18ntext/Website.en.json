@@ -1,0 +1,22 @@
+{
+  "navItems_home": "Home",
+  "navItems_toggleTheme": "Toggle Theme",
+  "navItems_changeLanguage": "Change Language",
+  "index_resumeLoadingPageTitle": "Resume is loading...",
+  "index_resumeLoadingText": "Loading...",
+  "index_resumeOf": "Resume of ",
+  "index_education": "Education",
+  "index_certificates": "Certificates",
+  "index_languages": "Languages",
+  "resumeBasics_bornOn": "Born on ",
+  "resumeCertification_issuedBy": "Issued by ",
+  "resumeCertification_on": " on ",
+  "resumeEducation_present": "Present",
+  "resumeLanguage_native": "Native",
+  "resumeLanguage_fluent": "Fluent",
+  "resumeLanguage_professional": "Professional",
+  "resumeLanguage_conversational": "Conversational",
+  "resumeLanguage_limited": "Limited",
+  "resumeLanguage_elementary": "Elementary"
+
+}

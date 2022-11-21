@@ -1,22 +1,23 @@
 ﻿@page "/"
 @using ResumeApp.Components.Resume
 @inject HttpClient Http
+@inject Toolbelt.Blazor.I18nText.I18nText I18nText
 
 @if (ResumeData == null)
 {
-    <PageTitle>Resume is loading...</PageTitle>
+    <PageTitle>@_website.index_resumeLoadingPageTitle</PageTitle>
     <a class="loader little-padding" role="status">
-        <span class="tiny no-opacity">Loading...</span>
+        <span class="tiny no-opacity">@_website.index_resumeLoadingText</span>
     </a>
 }
 else
 {
     <article class="primary-container">
-        <PageTitle>Resume of @ResumeData.Basics.Name</PageTitle>
+        <PageTitle>@_website.index_resumeOf@ResumeData.Basics.Name</PageTitle>
         <ResumeBasics Basics="ResumeData.Basics" />
         <article>
             <details>
-                <ResumeListDetailsSummary Icon="school" Title="Education" />
+                <ResumeListDetailsSummary Icon="school" Title="@_website.index_education" />
                 <div>
                     @foreach (var education in ResumeData.Education)
                     {
@@ -29,7 +30,7 @@ else
         {
             <article>
                 <details>
-                    <ResumeListDetailsSummary Icon="card_membership" Title="Certificates"/>
+                    <ResumeListDetailsSummary Icon="card_membership" Title="@_website.index_certificates"/>
                     <div>
                         @foreach (var certificate in ResumeData.Certificates)
                         {
@@ -45,7 +46,7 @@ else
         }
         <article>
             <details>
-                <ResumeListDetailsSummary Icon="language" Title="Languages" />
+                <ResumeListDetailsSummary Icon="language" Title="@_website.index_languages" />
                 <div>
                     @foreach (var language in ResumeData.Languages)
                     {
@@ -58,9 +59,19 @@ else
 }
 @code {
     public ResumeModel? ResumeData { get; set; }
+    I18nText.Website _website = new();
+
 
     protected override async Task OnInitializedAsync()
     {
-        ResumeData = await Http.GetFromJsonAsync<ResumeModel>("data/resume.json");
+        var lang = await I18nText.GetCurrentLanguageAsync();
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+        ResumeData = await Http.GetFromJsonAsync<ResumeModel>($"data/resume.{lang.Split('-')[0]}.json");
+        I18nText.ChangeLanguage += async (s, a) =>
+        {
+            ResumeData = await Http.GetFromJsonAsync<ResumeModel>($"data/resume.{a.LanguageCode.Split('-')[0]}.json");
+            Console.WriteLine($"Resume data is loaded with language: {a.LanguageCode.Split('-')[0]}");
+            await InvokeAsync(StateHasChanged);
+        };
     }
 }
