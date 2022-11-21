@@ -17,9 +17,9 @@
         <span><i>dark_mode</i></span>
     </label>
 }
-<button class="circle transparent" data-ui="#language-dropdown">
+<button class="circle transparent" data-ui="#@(Prefix)language-dropdown">
     <i>language</i> <span>@_website.navItems_changeLanguage</span>
-    <div class="dropdown no-wrap" id="language-dropdown">
+    <div class="dropdown no-wrap" id="@(Prefix)language-dropdown">
         @if (_supportedLanguages != null)
         {
             @foreach (var language in _supportedLanguages)
@@ -45,6 +45,9 @@
     private string? _currentLang;
     private Dictionary<string,string>? _supportedLanguages;
     private bool? IsDarkModeEnabled { get; set; } = null;
+    
+    [Parameter]
+    public required string Prefix { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

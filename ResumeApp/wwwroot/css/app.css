@@ -99,7 +99,11 @@ code {
 }
 
 #language-dropdown.active {
-    transform: translateY(0);
+    transform: translateY(0) translateX(55%);
+}
+
+#bottom-nav-language-dropdown.active {
+    transform: translateY(-45%) translateX(-63%);
 }
 
 a i.em {
