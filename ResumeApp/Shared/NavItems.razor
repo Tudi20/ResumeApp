@@ -9,9 +9,14 @@
     <i>home</i> <span>@_website.navItems_home</span>
 </NavLink>
 <div class="max"></div>
-<button class="circle transparent" @onclick="BrowserModeService.ToggleDarkModeAsync">
-    <i>light_mode</i> <span>@_website.navItems_toggleTheme</span>
-</button>
+@if (IsDarkModeEnabled != null)
+{
+    <label class="switch">
+        <input type="checkbox" checked="@IsDarkModeEnabled" @onchange="ToggleDarkModeAsync"
+               aria-label="@_website.navItems_toggleTheme">
+        <span><i>dark_mode</i></span>
+    </label>
+}
 <button class="circle transparent" data-ui="#language-dropdown">
     <i>language</i> <span>@_website.navItems_changeLanguage</span>
     <div class="dropdown no-wrap" id="language-dropdown">
@@ -22,11 +27,11 @@
                 <a @onclick="(_ => ChangeCurrentLanguage(language.Key))">
                     @if (_currentLang != language.Key)
                     {
-                        @language.Value
+                        <i class="em @language.Value.Split(' ')[0]"></i> @language.Value.Split(' ')[1]
                     }
                     else
                     {
-                        <strong>@language.Value</strong>
+                        <i class="em @language.Value.Split(' ')[0]"></i> <strong>@language.Value.Split(' ')[1]</strong>
                     }
                 </a>
             }
@@ -39,9 +44,11 @@
     I18nText.Website _website = new();
     private string? _currentLang;
     private Dictionary<string,string>? _supportedLanguages;
+    private bool? IsDarkModeEnabled { get; set; } = null;
 
     protected override async Task OnInitializedAsync()
     {
+        IsDarkModeEnabled = await BrowserModeService.GetDarkModePreferenceAsync();
         _supportedLanguages = await Http.GetFromJsonAsync<Dictionary<string,string>>("data/supportedLanguages.json");
         var lang = await I18nText.GetCurrentLanguageAsync();
         _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
@@ -61,5 +68,10 @@
         _currentLang = newLanguage;
         await I18nText.SetCurrentLanguageAsync(_currentLang);
         await BrowserModeService.CallUiAsync("#language-dropdown");
+    }
+    
+    private async Task ToggleDarkModeAsync()
+    {
+        await BrowserModeService.ToggleDarkModeAsync();
     }
 }

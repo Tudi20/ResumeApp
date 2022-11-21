@@ -16,7 +16,9 @@ public class BrowserModeService
 
     public async Task<bool> GetDarkModeAsync()
     {
-        return await _jsRuntime.InvokeAsync<string>("ui", "mode") == "dark";
+        var mode = await _jsRuntime.InvokeAsync<string>("ui", "mode");
+        Console.WriteLine(mode);
+        return mode == "dark";
     }
 
     public async Task<bool> GetDarkModePreferenceAsync()

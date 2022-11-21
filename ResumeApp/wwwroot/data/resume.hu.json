@@ -48,17 +48,17 @@
     {
       "name": "Magyar",
       "level": "Anyanyelv",
-      "emoji": "🇭🇺"
+      "emoji": "em-flag-hu"
     },
     {
       "name": "Angol",
       "level": "Folyékony",
-      "emoji": "🇬🇧"
+      "emoji": "em-gb"
     },
     {
       "name": "Japán",
       "level": "Elemi",
-      "emoji": "🇯🇵"
+      "emoji": "em-jp"
     }
   ]
 }

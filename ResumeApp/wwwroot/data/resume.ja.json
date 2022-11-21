@@ -48,17 +48,17 @@
     {
       "name": "ハンガリー語",
       "level": "母国語",
-      "emoji": "🇭🇺"
+      "emoji": "em-flag-hu"
     },
     {
       "name": "英語",
       "level": "流暢",
-      "emoji": "🇬🇧"
+      "emoji": "em-gb"
     },
     {
       "name": "日本語",
       "level": "初級",
-      "emoji": "🇯🇵"
+      "emoji": "em-jp"
     }
   ]
 }

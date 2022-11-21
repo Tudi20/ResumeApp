@@ -101,3 +101,8 @@ code {
 #language-dropdown.active {
     transform: translateY(0);
 }
+
+a i.em {
+    height: 1em;
+    width: 1em;
+}
