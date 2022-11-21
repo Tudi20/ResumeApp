@@ -1,14 +1,14 @@
 ﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
 @if (Basics != null)
 {
-    <article class="secondary" style="flex-grow: 1">
+    <article class="primary" style="flex-grow: 1">
         <div class="row">
             <img class="circle large" src="@Basics.Picture"/>
             <div class="max">
                 <h5>@Basics.Name</h5>
                 <p>@Basics.Label</p>
                 <p>@_website.resumeBasics_bornOn@Basics.BirthDate</p>
-                <p>@_website.resumeBasics_email<a href="email:@Basics.Email">@Basics.Email</a></p>
+                <p>@_website.resumeBasics_email<a href="mailto:@Basics.Email">@Basics.Email</a></p>
             </div>
         </div>
     </article>

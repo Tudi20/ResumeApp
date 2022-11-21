@@ -12,49 +12,47 @@
 }
 else
 {
-    <article class="primary-container">
-        <PageTitle>@_website.index_resumeOf@ResumeData.Basics.Name</PageTitle>
-        <ResumeBasics Basics="ResumeData.Basics" />
+    <PageTitle>@_website.index_resumeOf@ResumeData.Basics.Name</PageTitle>
+    <ResumeBasics Basics="ResumeData.Basics" />
+    <article>
+        <details>
+            <ResumeListDetailsSummary Icon="school" Title="@_website.index_education" />
+            <div>
+                @foreach (var education in ResumeData.Education)
+                {
+                    <ResumeEducation Education="education" />
+                }
+            </div>
+        </details>
+    </article>
+    @if (ResumeData.Certificates != null)
+    {
         <article>
             <details>
-                <ResumeListDetailsSummary Icon="school" Title="@_website.index_education" />
+                <ResumeListDetailsSummary Icon="card_membership" Title="@_website.index_certificates"/>
                 <div>
-                    @foreach (var education in ResumeData.Education)
+                    @foreach (var certificate in ResumeData.Certificates)
                     {
-                        <ResumeEducation Education="education" />
+                        <ResumeCertification Certification="certificate" />
                     }
                 </div>
             </details>
         </article>
-        @if (ResumeData.Certificates != null)
-        {
-            <article>
-                <details>
-                    <ResumeListDetailsSummary Icon="card_membership" Title="@_website.index_certificates"/>
-                    <div>
-                        @foreach (var certificate in ResumeData.Certificates)
-                        {
-                            <ResumeCertification Certification="certificate" />
-                        }
-                    </div>
-                </details>
-            </article>
-        }
-        else
-        {
-            <!-- Certifications are not available -->
-        }
-        <article>
-            <details>
-                <ResumeListDetailsSummary Icon="language" Title="@_website.index_languages" />
-                <div>
-                    @foreach (var language in ResumeData.Languages)
-                    {
-                        <ResumeLanguage Language="language" />
-                    }
-                </div>
-            </details>
-        </article>
+    }
+    else
+    {
+        <!-- Certifications are not available -->
+    }
+    <article>
+        <details>
+            <ResumeListDetailsSummary Icon="language" Title="@_website.index_languages" />
+            <div>
+                @foreach (var language in ResumeData.Languages)
+                {
+                    <ResumeLanguage Language="language" />
+                }
+            </div>
+        </details>
     </article>
 }
 @code {
