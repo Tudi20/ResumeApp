@@ -8,6 +8,9 @@
   "index_education": "教育",
   "index_certificates": "証明書",
   "index_languages": "言語",
+  "index_skills": "スキル",
+  "index_experience": "経験",
+  "index_hobbies": "趣味",
   "resumeBasics_bornOn": "生年月日は",
   "resumeBasics_email": "電子メールは",
   "resumeCertification_issuedBy": "発行元は",
@@ -18,5 +21,12 @@
   "resumeLanguage_professional": "専門的",
   "resumeLanguage_conversational": "会話可能",
   "resumeLanguage_limited": "不十分",
-  "resumeLanguage_elementary": "初級"
+  "resumeLanguage_elementary": "初級",
+  "resumeSkills_programmingLanguages": "プログラミング言語：",
+  "resumeSkills_frameworks": "フレームワーク：",
+  "resumeSkills_versionControl": "バージョン管理：",
+  "resumeSkills_developmentEnvironments": "開発環境：",
+  "resumeExperience_profession": "職業",
+  "resumeExperience_language": "言語",
+  "resumeHobbies_hobbies": "趣味："
 }

@@ -60,5 +60,43 @@
       "level": "初級",
       "emoji": "em-jp"
     }
-  ]
+  ],
+  "skills": {
+    "programmingLanguages": [ "C#", "C", "HTML", "CSS", "JS", "SQL" ],
+    "programmingLanguagesImages": [
+      "pictures/programming-language-logos/csharp.svg",
+      "pictures/programming-language-logos/c.svg",
+      "pictures/programming-language-logos/html5.svg",
+      "pictures/programming-language-logos/css3.svg",
+      "pictures/programming-language-logos/javascript.svg",
+      "pictures/programming-language-logos/database.svg"
+    ],
+    "frameworks": [ "WinForms", "WPF", "MAUI", "ASP.NET", "Blazor", "Angular", "Bootstrap", "Material" ],
+    "frameworksImages": [
+      "pictures/programming-language-logos/dotnet.svg",
+      "pictures/programming-language-logos/dotnet.svg",
+      "pictures/programming-language-logos/dotnet.svg",
+      "pictures/programming-language-logos/dotnet.svg",
+      "pictures/programming-language-logos/blazor.png",
+      "pictures/programming-language-logos/angularjs.svg",
+      "pictures/programming-language-logos/bootstrap.svg",
+      "pictures/programming-language-logos/materialdesign.svg"
+    ],
+    "versionControl": [ "Git", "Github" ],
+    "versionControlImages": [
+      "pictures/programming-language-logos/git.svg",
+      "pictures/programming-language-logos/github.svg"
+    ],
+    "developmentEnvironments": [ "Visual Studio", "Visual Studio Code", "vim (基礎的)" ],
+    "developmentEnvironmentsImages": [
+      "pictures/programming-language-logos/visualstudio.svg",
+      "pictures/programming-language-logos/visualstudiocode.svg",
+      "pictures/programming-language-logos/vim.svg"
+    ]
+  },
+  "experience": {
+    "profession": "私の研究中や趣味で書いたソフトウェアや寄稿は、<a href='https://github.com/tudi20'>gihub.com/tudi20</a> で公開されています。例として、MS-SQL、ASP.NET、Angularの技術を使ったチュートリアルベースのWebアプリケーションを紹介します。また、小学校のコンクールのために書かれたPascalのプログラムも見つけることができます。",
+    "language": "私は小学生の頃から英語を習っており、YouTubeで動画を見たり、オンラインでチャットをしたりして流暢に話せるようになりました。また、Crowdinの複数のコミュニティプロジェクトを手伝ったこともありました。例えば、コミュニケーション・プラットフォーム「Discord」や、最近ではリズムゲーム「osu!」などがそうです。"
+  },
+  "hobbies": [ "1人のソフトウェア開発", "新しいテクノロジーを試してみます", "コミュニティ翻訳プロジェクトの支援", "漫画を読む", "日本語を学ぶ", "ビデオゲーム（インディーまたはFFXIV）" ]
 }

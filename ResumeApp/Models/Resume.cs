@@ -8,6 +8,9 @@ public record ResumeModel
     public required List<ResumeEducationModel> Education { get; set; }
     public List<ResumeCertificationModel>? Certificates { get; set; }
     public required List<ResumeLanguageModel> Languages { get; set; }
+    public ResumeSkillsModel? Skills { get; set; }
+    public ResumeExperienceModel? Experience { get; set; }
+    public List<string>? Hobbies { get; set; }
 }
 
 public record ResumeBasicsModel
@@ -41,4 +44,22 @@ public record ResumeLanguageModel
     public required string Name { get; set; }
     public required string Level { get; set; }
     public required string Emoji { get; set; }
+}
+
+public record ResumeSkillsModel
+{
+    public List<string>? ProgrammingLanguages { get; set; }
+    public List<string>? ProgrammingLanguagesImages { get; set; }
+    public List<string>? Frameworks { get; set; }
+    public List<string>? FrameworksImages { get; set; }
+    public List<string>? VersionControl { get; set; }
+    public List<string>? VersionControlImages { get; set; }
+    public List<string>? DevelopmentEnvironments { get; set; }
+    public List<string>? DevelopmentEnvironmentsImages { get; set; }
+}
+
+public record ResumeExperienceModel
+{
+    public string? Profession { get; set; }
+    public string? Language { get; set; }
 }

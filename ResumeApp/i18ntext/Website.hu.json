@@ -8,6 +8,9 @@
   "index_education": "Tanulmányok",
   "index_certificates": "Bizonyítványok",
   "index_languages": "Nyelvek",
+  "index_skills": "Tudás",
+  "index_experience": "Tapasztalat",
+  "index_hobbies": "Hobbik",
   "resumeBasics_bornOn": "Születési dátum: ",
   "resumeBasics_email": "E-mail: ",
   "resumeCertification_issuedBy": "Kiadta ",
@@ -18,5 +21,12 @@
   "resumeLanguage_professional": "Professzionális",
   "resumeLanguage_conversational": "Társalgó",
   "resumeLanguage_limited": "Korlátozott",
-  "resumeLanguage_elementary": "Elemi"
+  "resumeLanguage_elementary": "Elemi",
+  "resumeSkills_programmingLanguages": "Programozói nyelvek: ",
+  "resumeSkills_frameworks": "Keretrendszerek: ",
+  "resumeSkills_versionControl": "Verziókezelés: ",
+  "resumeSkills_developmentEnvironments": "Fejlesztői környezetek: ",
+  "resumeExperience_profession": "Szakmai",
+  "resumeExperience_language": "Nyelvi",
+  "resumeHobbies_hobbies": "Hobbik: "
 }

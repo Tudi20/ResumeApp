@@ -15,5 +15,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Services\" />
+    <Folder Include="wwwroot\pictures\programming-language-logos\" />
   </ItemGroup>
+
 </Project>

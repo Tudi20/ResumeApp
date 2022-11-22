@@ -54,6 +54,47 @@ else
             </div>
         </details>
     </article>
+    @if (ResumeData.Skills != null)
+    {
+        <article>
+            <details>
+                <ResumeListDetailsSummary Icon="book" Title="@_website.index_skills" />
+                <div>
+                    <ResumeSkills Skills="@ResumeData.Skills" />
+                </div>
+            </details>
+        </article>
+    }
+    else
+    {
+        <!-- Skills are not available -->
+    }
+    @if (ResumeData.Experience != null)
+    {
+        <article>
+            <details>
+                <ResumeListDetailsSummary Icon="stars" Title="@_website.index_experience" />
+                <div>
+                    <ResumeExperience Experience="@ResumeData.Experience" />
+                </div>
+            </details>
+        </article>
+    }
+    else
+    {
+        <!-- Experience is not available -->
+    }
+    @if (ResumeData.Hobbies != null)
+    {
+        <article>
+            <details>
+                <ResumeListDetailsSummary Icon="interests" Title="@_website.index_hobbies" />
+                <div>
+                    <ResumeHobbies Hobbies="@ResumeData.Hobbies" />
+                </div>
+            </details>
+        </article>
+    }
 }
 @code {
     public ResumeModel? ResumeData { get; set; }

@@ -1,0 +1,32 @@
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+
+@if (Experience?.Profession != null)
+{
+    <div class="grid">
+        <h6 class="s1">@_website.resumeExperience_profession</h6>
+        <div class="s11">
+            @((MarkupString)Experience.Profession)
+        </div>
+    </div>
+}
+@if (Experience?.Language != null)
+{
+    <div class="grid">
+        <h6 class="s1">@_website.resumeExperience_language</h6>
+        <div class="s11">
+            @((MarkupString)Experience.Language)
+        </div>
+    </div>
+}
+
+@code {
+    I18nText.Website _website = new();
+    
+    [Parameter]
+    public ResumeExperienceModel? Experience { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+    }
+}

@@ -1,0 +1,34 @@
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+
+@if (Skills?.ProgrammingLanguages != null)
+{
+    <ChipRow Data="@Skills.ProgrammingLanguages" Title="@_website.resumeSkills_programmingLanguages" ChipColor="fill"
+             ChipImages="Skills.ProgrammingLanguagesImages"/>
+}
+@if (Skills?.Frameworks != null)
+{
+    <ChipRow Data="@Skills.Frameworks" Title="@_website.resumeSkills_frameworks" ChipColor="fill"
+             ChipImages="Skills.FrameworksImages"/>
+}
+@if (Skills?.VersionControl != null)
+{
+    <ChipRow Data="@Skills.VersionControl" Title="@_website.resumeSkills_versionControl" ChipColor="fill"
+             ChipImages="Skills.VersionControlImages"/>
+}
+@if (Skills?.DevelopmentEnvironments != null)
+{
+    <ChipRow Data="@Skills.DevelopmentEnvironments" Title="@_website.resumeSkills_developmentEnvironments" ChipColor="fill"
+             ChipImages="Skills.DevelopmentEnvironmentsImages"/>
+}
+
+@code {
+    I18nText.Website _website = new();
+    
+    [Parameter]
+    public ResumeSkillsModel? Skills { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+    }
+}

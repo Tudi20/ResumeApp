@@ -1,0 +1,75 @@
+﻿<div class="@(Title != null ? "grid" : "row")">
+@if (Title != null)
+{
+    <h6 class="s2">
+        @if (Icon != null)
+        {
+            <i>@Icon</i>
+        }
+        @if (Emoji != null)
+        {
+            <i class="em @Emoji"></i>
+        }
+        <span>@Title</span>
+    </h6>
+}        
+    <div class="@(Title != null ? "s10" : "max" ) scroll">
+        @for (var i = 0; i < Data.Count; i++)
+        {
+            @if (ChipIcon != null)
+            {
+                <a class="chip small-elevate @_chipRoundCss @ChipSize @ChipColor small-margin">
+                    <i class="small">@ChipIcon[i]</i>
+                    <span>@Data[i]</span>
+                </a>
+            }
+            else
+            {
+                @if (ChipImages != null)
+                {
+                    <a class="chip small-elevate @_chipRoundCss @ChipSize @ChipColor small-margin">
+                        <img class="responsive" src="@ChipImages[i]" alt="Image of @Data[i]"/>
+                        <span>@Data[i]</span>
+                    </a>
+                }
+                else
+                {
+                    <a class="chip small-elevate @_chipRoundCss @ChipSize @ChipColor small-margin">@Data[i]</a>
+                }
+            }
+        }
+    </div>
+</div>
+@code {
+    private string _chipRoundCss = "round";
+    [Parameter]
+    public required List<string> Data { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+    
+    [Parameter]
+    public string? Icon { get; set; }
+    
+    [Parameter]
+    public string? Emoji { get; set; }
+    
+    [Parameter]
+    public List<string>? ChipIcon { get; set; }
+
+    [Parameter]
+    public List<string>? ChipImages { get; set; }
+    
+    [Parameter]
+    public string ChipSize { get; set; } = "small";
+
+    [Parameter]
+    public bool ChipRound
+    {
+        get => _chipRoundCss == "round";
+        set => _chipRoundCss = value ? "round" : "";
+    }
+
+    [Parameter]
+    public string ChipColor { get; set; } = "default";
+}
