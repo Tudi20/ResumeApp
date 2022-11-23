@@ -2,7 +2,7 @@
 
 @if (Hobbies != null)
 {
-    <ChipRow Data="@Hobbies" ChipColor="primary" />
+    <ChipRow Data="@Hobbies" ChipIcon="@HobbiesIcons" ChipColor="primary" />
 }
 
 @code {
@@ -10,6 +10,9 @@
     
     [Parameter]
     public List<string>? Hobbies { get; set; }
+
+    [Parameter]
+    public List<string>? HobbiesIcons { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

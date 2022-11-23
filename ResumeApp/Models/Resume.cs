@@ -11,6 +11,7 @@ public record ResumeModel
     public ResumeSkillsModel? Skills { get; set; }
     public ResumeExperienceModel? Experience { get; set; }
     public List<string>? Hobbies { get; set; }
+    public List<string>? HobbiesIcons { get; set; }
 }
 
 public record ResumeBasicsModel
