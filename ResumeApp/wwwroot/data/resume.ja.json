@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Kláben Szabolcs Bence",
-    "label": "ソフトウェア開発者、ソフトウェアテスター、DevOps、またはR&Dの仕事を探している。",
+    "label": "ソフトウェア開発者、ソフトウェアテスター、またはDevOpsの仕事を探している。",
     "picture": "pictures/pfp.jpg",
     "email": "klaben.szabolcs@gmail.com",
     "birthDate": "2000-05-20"
@@ -98,5 +98,13 @@
     "profession": "私の研究中や趣味で書いたソフトウェアや寄稿は、<a href='https://github.com/tudi20'>gihub.com/tudi20</a> で公開されています。例として、MS-SQL、ASP.NET、Angularの技術を使ったチュートリアルベースのWebアプリケーションを紹介します。また、小学校のコンクールのために書かれたPascalのプログラムも見つけることができます。",
     "language": "私は小学生の頃から英語を習っており、YouTubeで動画を見たり、オンラインでチャットをしたりして流暢に話せるようになりました。また、Crowdinの複数のコミュニティプロジェクトを手伝ったこともありました。例えば、コミュニケーション・プラットフォーム「Discord」や、最近ではリズムゲーム「osu!」などがそうです。"
   },
-  "hobbies": [ "1人のソフトウェア開発", "新しいテクノロジーを試してみます", "コミュニティ翻訳プロジェクトの支援", "漫画を読む", "日本語を学ぶ", "ビデオゲーム（インディーまたはFFXIV）" ]
+  "hobbies": [ "1人のソフトウェア開発", "新しいテクノロジーを試してみます", "コミュニティ翻訳プロジェクトの支援", "漫画を読む", "日本語を学ぶ", "ビデオゲーム（インディーまたはFFXIV）" ],
+  "hobbiesIcons": [
+    "code",
+    "science",
+    "translate",
+    "local_library",
+    "language",
+    "videogame_asset"
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Kláben Szabolcs Bence",
-    "label": "Munkát keresek szoftverfejlesztőként, szoftvertesztelőként, DevOpsként, vagy R&D-ben.",
+    "label": "Munkát keresek szoftverfejlesztőként, szoftvertesztelőként, vagy akár DevOpsként.",
     "picture": "pictures/pfp.jpg",
     "email": "klaben.szabolcs@gmail.com",
     "birthDate": "2000-05-20"
@@ -98,5 +98,13 @@
     "profession": "A tanulmányaim alatt és hobbiból megírt szoftverjeim és hozzájárúlásaim megtekinthetőek a <a href='https://github.com/tudi20'>gihub.com/tudi20</a> oldalon. Ilyen például egy útmutató alapján készített webalkalmazás MS-SQL, ASP.NET és Angular technológiákat alkalmazva. Továbbá itt megtalálhatóak az általános iskolás versenyre írt Pascal programok is.",
     "language": "Általános iskola óta tanulok angolul, a folyékonyságot YouTube-on való videók nézésével és az interneten való csevegéssel értem el. Forítási közösségi projektekben is segítettem már Crowdinon. Ilyen volt például a Discord kommunikációs platform, és legutoljára az osu! ritmus videójáték."
   },
-  "hobbies":  ["Egyszemélyes szoftverfejlesztés", "Új technológiák kipróbálása", "Közösségi fordítási projektekben való segítség", "Mangák olvasása", "Japán nyelv tanulása", "Videójátékozás (Indie vagy FF14)" ]
+  "hobbies": [ "Egyszemélyes szoftverfejlesztés", "Új technológiák kipróbálása", "Közösségi fordítási projektekben való segítség", "Mangák olvasása", "Japán nyelv tanulása", "Videójátékozás (Indie vagy FF14)" ],
+  "hobbiesIcons": [
+    "code",
+    "science",
+    "translate",
+    "local_library",
+    "language",
+    "videogame_asset"
+  ]
 }
