@@ -2,5 +2,5 @@
 [![Using Blazor](https://img.shields.io/badge/Framework-Blazor-informational)](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
 [![Build Status](https://dev.azure.com/tudi20/ResumeApp/_apis/build/status/Tudi20.ResumeApp?branchName=master)](https://dev.azure.com/tudi20/ResumeApp/_build/latest?definitionId=1&branchName=master)
 [![Pages Build Deployment](https://github.com/Tudi20/ResumeApp/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/Tudi20/ResumeApp/actions/workflows/pages/pages-build-deployment)
-# ResumeApp
+# My Resume Web App
 A simple [Blazor WebAssembly](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) project that showcases my resume. The web app, on push gets published to the [gh-pages](https://github.com/Tudi20/ResumeApp/tree/gh-pages) branch by [Azure Pipelines](https://dev.azure.com/tudi20/ResumeApp/_build?definitionId=1), from which [Github Actions](https://github.com/Tudi20/ResumeApp/actions/workflows/pages/pages-build-deployment) automatically builds a [website](https://tudi20.github.io/ResumeApp/).
