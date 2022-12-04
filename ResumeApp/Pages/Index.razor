@@ -2,6 +2,7 @@
 @using ResumeApp.Components.Resume
 @inject HttpClient Http
 @inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@inject ILogger<Index> Logger
 
 @if (ResumeData == null)
 {
@@ -106,10 +107,12 @@ else
         var lang = await I18nText.GetCurrentLanguageAsync();
         _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
         ResumeData = await Http.GetFromJsonAsync<ResumeModel>($"data/resume.{lang.Split('-')[0]}.json");
+        Logger.LogInformation($"Resume data is loaded with {lang.Split('-')[0]} language.");
+
         I18nText.ChangeLanguage += async (s, a) =>
         {
             ResumeData = await Http.GetFromJsonAsync<ResumeModel>($"data/resume.{a.LanguageCode.Split('-')[0]}.json");
-            Console.WriteLine($"Resume data is loaded with language: {a.LanguageCode.Split('-')[0]}");
+            Logger.LogInformation($"Resume data is reloaded with {a.LanguageCode.Split('-')[0]} language.");
             await InvokeAsync(StateHasChanged);
         };
     }

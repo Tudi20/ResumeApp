@@ -3,9 +3,12 @@
     if (progress != null && progress != "") {
         progress = progress.replace("%", "")
         progress = Math.floor(parseFloat(progress));
-        console.log("Progress: " + progress);
+        console.log("Loading progress of Web App: " + progress + "%");
         ui("#app-loading", progress);
     }
-    if (progress >= 100) return;
+    if (progress >= 100) {
+        console.info("Web App loaded!");
+        return;
+    }
     setTimeout(updateProgress, 100);
 }
