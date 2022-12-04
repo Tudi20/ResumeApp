@@ -20,7 +20,7 @@
 <button class="circle transparent" data-ui="#@(Prefix)language-dropdown">
     <i>language</i> <span>@_website.navItems_changeLanguage</span>
     <div class="dropdown no-wrap" id="@(Prefix)language-dropdown">
-        @if (_supportedLanguages != null)
+        @if (_supportedLanguages != null && _currentLang != null)
         {
             @foreach (var language in _supportedLanguages)
             {
@@ -57,7 +57,9 @@
         _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
 
         Debug.Assert(_supportedLanguages != null, nameof(_supportedLanguages) + " != null");
-        _currentLang = _supportedLanguages.Keys.Contains(lang.Split('-')[0]) ? lang : "en-GB";
+        _currentLang = _supportedLanguages.Keys.Select(x => x.Split('-')[0]).
+            Contains(lang.Split('-')[0]) ? lang : "en-GB";
+        Console.WriteLine("Current Language: " + _currentLang);
         
         I18nText.ChangeLanguage += (s, a) =>
         {
