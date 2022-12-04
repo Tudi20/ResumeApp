@@ -1,0 +1,16 @@
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+
+<footer class="large medium-padding inverse-surface">
+    <div class="responsive center-align">
+        <p>@_website.footer_text</p>
+    </div>
+</footer>
+
+@code {
+    I18nText.Website _website = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+    }
+}
