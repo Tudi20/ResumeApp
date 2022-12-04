@@ -65,8 +65,27 @@
         _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
         
         var lang = await I18nText.GetCurrentLanguageAsync();
-        _currentLang = _supportedLanguages.Keys.Select(x => x.Split('-')[0]).
-            Contains(lang.Split('-')[0]) ? lang : "en-GB";
+
+        Logger.LogDebug($"User's desired language is {lang}.");
+        
+        if (_supportedLanguages.ContainsKey(lang))
+        {
+            _currentLang = lang;
+        }
+        else
+        {
+            /*
+             * If the exact language is not supported, use the first part of the language code if there's a variant
+             * that's supported. For example, if the language is "en-US", search for "en", and use "en-GB".
+             * If there's no supported variant, use "en-GB" as a fallback.
+             */
+        
+            Logger.LogWarning($"Language {lang} is not supported. Searching for a supported variant.");
+            _currentLang = _supportedLanguages.Keys.Select(x => x.Split('-')[0]).
+                Contains(lang.Split('-')[0]) 
+                ? _supportedLanguages.Keys.First(l => l.Split('-')[0] == lang.Split('-')[0])
+                : "en-GB";
+        }
         
         Logger.LogInformation("Current Language: " + _currentLang);
         
