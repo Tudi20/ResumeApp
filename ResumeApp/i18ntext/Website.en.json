@@ -3,6 +3,7 @@
   "navItems_toggleTheme": "Toggle Theme",
   "navItems_changeLanguage": "Change Language",
   "footer_text": "Made with .NET 7 Blazor and Beercss in 2022.",
+  "footer_source": "See the source code on GitHub",
   "index_resumeLoadingPageTitle": "Resume is loading...",
   "index_resumeLoadingText": "Loading...",
   "index_resumeOf": "Resume of ",

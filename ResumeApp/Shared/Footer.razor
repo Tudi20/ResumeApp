@@ -1,8 +1,15 @@
 ﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
 
-<footer class="large medium-padding inverse-surface">
+<footer class="large medium-padding surface-variant">
     <div class="responsive center-align">
         <p>@_website.footer_text</p>
+        <a href="https://github.com/Tudi20/tudi20.github.io" target="_blank">
+            <div class="row center-align">
+                <img src="pictures/programming-language-logos/github.svg" alt="GitHub"
+                width="15" height="15">
+                <span class="underline max">@_website.footer_source</span>
+            </div>
+        </a>
     </div>
 </footer>
 

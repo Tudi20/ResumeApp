@@ -3,6 +3,7 @@
   "navItems_toggleTheme": "トグルのテーマ",
   "navItems_changeLanguage": "言語を変更する",
   "footer_text": "2022年に.NET 7 BlazorとBeercssで作られました。",
+  "footer_source": "ソースコードはGitHubでご覧いただけます。",
   "index_resumeLoadingPageTitle": "レジュメを読み込んでいます...",
   "index_resumeLoadingText": "読み込み中...",
   "index_resumeOf": "レジュメ：",
