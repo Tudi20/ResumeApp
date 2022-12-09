@@ -2,18 +2,18 @@
 
 @if (Experience?.Profession != null)
 {
-    <div class="grid">
-        <h6 class="s1">@_website.resumeExperience_profession</h6>
-        <div class="s11">
+    <div class="row">
+        <h6>@_website.resumeExperience_profession</h6>
+        <div class="max">
             @((MarkupString)Experience.Profession)
         </div>
     </div>
 }
 @if (Experience?.Language != null)
 {
-    <div class="grid">
-        <h6 class="s1">@_website.resumeExperience_language</h6>
-        <div class="s11">
+    <div class="row">
+        <h6>@_website.resumeExperience_language</h6>
+        <div class="max">
             @((MarkupString)Experience.Language)
         </div>
     </div>

@@ -1,7 +1,7 @@
-﻿<div class="@(Title != null ? "grid" : "row")">
+﻿<div class="row">
 @if (Title != null)
 {
-    <h6 class="s2">
+    <h6>
         @if (Icon != null)
         {
             <i>@Icon</i>
@@ -13,7 +13,7 @@
         <span>@Title</span>
     </h6>
 }        
-    <div class="@(Title != null ? "s10" : "max" ) scroll">
+    <div class="max scroll">
         @for (var i = 0; i < Data.Count; i++)
         {
             @if (ChipIcon != null)
