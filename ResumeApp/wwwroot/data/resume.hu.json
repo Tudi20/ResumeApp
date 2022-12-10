@@ -105,7 +105,8 @@
       "Visual Studio Code",
       "vim (alapszinten)",
       "Azure",
-      "Azure DevOps"
+      "Azure DevOps",
+      "DNS"
     ],
     "otherImages": [
       "pictures/programming-language-logos/git.svg",
@@ -114,7 +115,8 @@
       "pictures/programming-language-logos/visualstudiocode.svg",
       "pictures/programming-language-logos/vim.svg",
       "pictures/programming-language-logos/azure.svg",
-      "pictures/programming-language-logos/azuredevops.svg"
+      "pictures/programming-language-logos/azuredevops.svg",
+      "pictures/programming-language-logos/dns.svg"
     ]
   },
   "experience": {
