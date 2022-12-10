@@ -1,3 +1,7 @@
 ﻿h6 {
     padding-bottom: 16rem;
 }
+
+a.chip img {
+    background-color: white;
+}

@@ -82,14 +82,6 @@ code {
     background-color: var(--surface-variant, #f2f2f2);
 }
 
-#language-dropdown.active {
-    transform: translateY(0) translateX(55%);
-}
-
-#bottom-nav-language-dropdown.active {
-    transform: translateY(-45%) translateX(-63%);
-}
-
 a i.em {
     height: 1em;
     width: 1em;
@@ -103,8 +95,4 @@ a i.em {
 .primary a:active {
     color: red;
     border-bottom: 1px solid red;
-}
-
-a.chip img {
-    background-color: white;
 }

@@ -1,0 +1,7 @@
+﻿nav.left .dropdown.active {
+    transform: translateY(0) translateX(55%);
+}
+
+nav.bottom .dropdown.active {
+    transform: translateY(-45%) translateX(-63%);
+}
