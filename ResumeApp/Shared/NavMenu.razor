@@ -12,7 +12,8 @@
 @code {
     protected override async Task OnInitializedAsync()
     {
-        await BrowserModeService.SetDarkModeAsync(await BrowserModeService.GetDarkModePreferenceAsync());
+        var pref = await BrowserModeService.GetDarkModePreferenceAsync();
+        await BrowserModeService.SetDarkModeAsync(pref);
     }
 
 }

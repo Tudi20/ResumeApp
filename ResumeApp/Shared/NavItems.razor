@@ -7,19 +7,48 @@
 @inject ILogger<NavItems> Logger
 
 <NavLink href="" Match="NavLinkMatch.All">
-    <i>home</i> <span>@_website.navItems_home</span>
+    @if (_website.navItems_home != null)
+    {
+        <i>home</i>
+        <span>@_website.navItems_home</span>
+    }
+    else
+    {
+        <i>home</i>
+        <a class="loader small"></a>
+    }
 </NavLink>
 <div class="max"></div>
 @if (IsDarkModeEnabled != null)
 {
-    <label class="switch">
-        <input type="checkbox" checked="@IsDarkModeEnabled" @onchange="ToggleDarkModeAsync"
-               aria-label="@_website.navItems_toggleTheme">
-        <span><i>dark_mode</i></span>
-    </label>
+    @if (_website.navItems_toggleTheme != null)
+    {
+        <label class="switch">
+            <input type="checkbox" checked="@IsDarkModeEnabled" @onchange="ToggleDarkModeAsync"
+                   aria-label="@_website.navItems_toggleTheme">
+            <span><i>dark_mode</i></span>
+        </label>
+    }
+    else
+    {
+        <label class="switch">
+            <input type="checkbox" checked="@IsDarkModeEnabled" @onchange="ToggleDarkModeAsync"
+           aria-label="Toggle dark mode (Localisation is still loading)">
+            <span><i>dark_mode</i></span>
+        </label>
+    }
 }
 <button class="circle transparent" data-ui="#@(Prefix)language-dropdown">
-    <i>language</i> <span>@_website.navItems_changeLanguage</span>
+    @if (_website.navItems_changeLanguage != null)
+    {
+        <i>language</i>
+        <span>@_website.navItems_changeLanguage</span>
+    }
+    else
+    {
+        <i>language</i>
+        <span>Loading...</span>
+    }
     <div class="dropdown no-wrap" id="@(Prefix)language-dropdown">
         @if (_supportedLanguages != null && _currentLang != null)
         {
@@ -28,11 +57,13 @@
                 <a @onclick="(_ => ChangeCurrentLanguage(language.Key))">
                     @if (_currentLang != language.Key)
                     {
-                        <i class="em @language.Value.Split(' ')[0]"></i> @language.Value.Split(' ')[1]
+                        <i class="em @language.Value.Split(' ')[0]"></i>
+                        @language.Value.Split(' ')[1]
                     }
                     else
                     {
-                        <i class="em @language.Value.Split(' ')[0]"></i> <strong>@language.Value.Split(' ')[1]</strong>
+                        <i class="em @language.Value.Split(' ')[0]"></i>
+                        <strong>@language.Value.Split(' ')[1]</strong>
                     }
                 </a>
             }
