@@ -104,3 +104,7 @@ a i.em {
     color: red;
     border-bottom: 1px solid red;
 }
+
+a.chip img {
+    background-color: white;
+}
