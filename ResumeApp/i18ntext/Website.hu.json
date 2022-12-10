@@ -2,7 +2,7 @@
   "navItems_home": "Főoldal",
   "navItems_toggleTheme": "Téma változtatása",
   "navItems_changeLanguage": "NYelv változtatása",
-  "footer_text": "Készült .NET 7 Blazor és Beercss segítségével 2022-ben.",
+  "footer_text": "Készült .NET 7 Blazor és Beercss segítségével $year.",
   "footer_source": "Tekintsd meg a forráskódot GitHubon",
   "index_resumeLoadingPageTitle": "Az önéletrajz töltődik...",
   "index_resumeLoadingText": "Betöltés...",
