@@ -103,14 +103,18 @@
       "Github",
       "Visual Studio",
       "Visual Studio Code",
-      "vim (基礎的)"
+      "vim (基礎的)",
+      "Azure",
+      "Azure DevOps"
     ],
     "otherImages": [
       "pictures/programming-language-logos/git.svg",
       "pictures/programming-language-logos/github.svg",
       "pictures/programming-language-logos/visualstudio.svg",
       "pictures/programming-language-logos/visualstudiocode.svg",
-      "pictures/programming-language-logos/vim.svg"
+      "pictures/programming-language-logos/vim.svg",
+      "pictures/programming-language-logos/azure.svg",
+      "pictures/programming-language-logos/azuredevops.svg"
     ]
   },
   "experience": {
