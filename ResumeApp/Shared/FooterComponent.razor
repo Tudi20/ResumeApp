@@ -1,0 +1,56 @@
+﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
+@inject HttpClient Http;
+
+<footer class="large medium-padding surface-variant center-align responsive">
+    @if (_lastUpdatedText != null)
+    {
+        <p>@_lastUpdatedText</p>
+    }
+    else
+    {
+        @if (_website.footer_text != null)
+        {
+            <p>@(_website.footer_text.Replace("$year", DateTime.Now.Year.ToString()))</p>
+        }
+        else
+        {
+            <a class="loader small"></a>
+        }
+    }
+    <a href="https://github.com/Tudi20/ResumeApp" target="_blank">
+        <div class="row center-align">
+            <img src="pictures/programming-language-logos/github.svg" alt="GitHub"
+                 width="15" height="15">
+            <span class="underline max">
+                @if (_website.footer_source != null)
+                {
+                    <span>@_website.footer_source</span>
+                }
+                else
+                {
+                    <a class="loader small"></a>
+                }
+            </span>
+        </div>
+    </a>
+</footer>
+
+@code {
+    I18nText.Website _website = new();
+    string? _lastUpdatedText;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
+        if (_website == null) return;
+        var lastCommit = await Http.GetFromJsonAsync<CommitsResult>(
+            "https://api.github.com/repos/Tudi20/ResumeApp/commits/master");
+        if (lastCommit != null)
+        {
+            _lastUpdatedText = 
+                _website.footer_text.Replace("$year",
+                    "2022-" + lastCommit.Commit.Author.Date.Year);
+        }
+        
+    }
+}
