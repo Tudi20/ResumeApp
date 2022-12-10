@@ -98,20 +98,16 @@
       "pictures/programming-language-logos/bootstrap.svg",
       "pictures/programming-language-logos/materialdesign.svg"
     ],
-    "versionControl": [
+    "other": [
       "Git",
-      "Github"
-    ],
-    "versionControlImages": [
-      "pictures/programming-language-logos/git.svg",
-      "pictures/programming-language-logos/github.svg"
-    ],
-    "developmentEnvironments": [
+      "Github",
       "Visual Studio",
       "Visual Studio Code",
       "vim (基礎的)"
     ],
-    "developmentEnvironmentsImages": [
+    "otherImages": [
+      "pictures/programming-language-logos/git.svg",
+      "pictures/programming-language-logos/github.svg",
       "pictures/programming-language-logos/visualstudio.svg",
       "pictures/programming-language-logos/visualstudiocode.svg",
       "pictures/programming-language-logos/vim.svg"
