@@ -10,15 +10,10 @@
     <ChipRow Data="@Skills.Frameworks" Title="@_website.resumeSkills_frameworks" ChipColor="fill"
              ChipImages="Skills.FrameworksImages"/>
 }
-@if (Skills?.VersionControl != null)
+@if (Skills?.Other != null)
 {
-    <ChipRow Data="@Skills.VersionControl" Title="@_website.resumeSkills_versionControl" ChipColor="fill"
-             ChipImages="Skills.VersionControlImages"/>
-}
-@if (Skills?.DevelopmentEnvironments != null)
-{
-    <ChipRow Data="@Skills.DevelopmentEnvironments" Title="@_website.resumeSkills_developmentEnvironments" ChipColor="fill"
-             ChipImages="Skills.DevelopmentEnvironmentsImages"/>
+    <ChipRow Data="@Skills.Other" Title="@_website.resumeSkills_other" ChipColor="fill"
+             ChipImages="Skills.OtherImages"/>
 }
 
 @code {

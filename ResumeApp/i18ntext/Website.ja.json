@@ -26,8 +26,7 @@
   "resumeLanguage_elementary": "初級",
   "resumeSkills_programmingLanguages": "プログラミング言語：",
   "resumeSkills_frameworks": "フレームワーク：",
-  "resumeSkills_versionControl": "バージョン管理：",
-  "resumeSkills_developmentEnvironments": "開発環境：",
+  "resumeSkills_other": "その他：",
   "resumeExperience_profession": "職業",
   "resumeExperience_language": "言語",
   "resumeHobbies_hobbies": "趣味："

@@ -53,10 +53,8 @@ public record ResumeSkillsModel
     public List<string>? ProgrammingLanguagesImages { get; set; }
     public List<string>? Frameworks { get; set; }
     public List<string>? FrameworksImages { get; set; }
-    public List<string>? VersionControl { get; set; }
-    public List<string>? VersionControlImages { get; set; }
-    public List<string>? DevelopmentEnvironments { get; set; }
-    public List<string>? DevelopmentEnvironmentsImages { get; set; }
+    public List<string>? Other { get; set; }
+    public List<string>? OtherImages { get; set; }
 }
 
 public record ResumeExperienceModel
