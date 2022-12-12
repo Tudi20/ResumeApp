@@ -98,3 +98,18 @@ a i.em {
     color: red;
     border-bottom: 1px solid red;
 }
+
+.tiny-width {
+    width: 96rem !important;
+    max-width: 100%;
+}
+
+.little-width {
+    width: 144rem !important;
+    max-width: 100%;
+}
+
+.modest-width {
+    width: 240rem !important;
+    max-width: 100%;
+}

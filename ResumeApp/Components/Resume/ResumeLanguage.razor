@@ -3,9 +3,13 @@
 @if (Language != null)
 {
     <div class="row">
-        <h5><i class="em @Language.Emoji"></i></h5>
+        <h6 class="modest-width">
+            <i class="em @Language.Emoji"></i>
+            <span class="small-margin right-align">@Language.Name</span>
+        </h6>
+        
         <div class="max">
-            <h6>@Language.Name <a class="chip border @LevelColorClassCss">@Language.Level</a></h6>
+            <a class="chip border @LevelColorClassCss">@Language.Level</a>
         </div>
     </div>
 }

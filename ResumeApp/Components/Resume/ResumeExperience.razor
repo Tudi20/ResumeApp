@@ -3,7 +3,7 @@
 @if (Experience?.Profession != null)
 {
     <div class="row">
-        <h6>@_website.resumeExperience_profession</h6>
+        <h6 class="tiny-width right-align">@_website.resumeExperience_profession</h6>
         <div class="max">
             @((MarkupString)Experience.Profession)
         </div>
@@ -12,7 +12,7 @@
 @if (Experience?.Language != null)
 {
     <div class="row">
-        <h6>@_website.resumeExperience_language</h6>
+        <h6 class="tiny-width right-align">@_website.resumeExperience_language</h6>
         <div class="max">
             @((MarkupString)Experience.Language)
         </div>
