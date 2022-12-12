@@ -24,9 +24,9 @@
   "resumeLanguage_conversational": "Conversational",
   "resumeLanguage_limited": "Limited",
   "resumeLanguage_elementary": "Elementary",
-  "resumeSkills_programmingLanguages": "Programming Languages: ",
-  "resumeSkills_frameworks": "Frameworks: ",
-  "resumeSkills_other": "Other: ",
+  "resumeSkills_programmingLanguages": "Programming Languages",
+  "resumeSkills_frameworks": "Frameworks",
+  "resumeSkills_other": "Other",
   "resumeExperience_profession": "Profession",
   "resumeExperience_language": "Language",
   "resumeHobbies_hobbies": "Hobbies: "

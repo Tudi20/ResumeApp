@@ -24,9 +24,9 @@
   "resumeLanguage_conversational": "Társalgó",
   "resumeLanguage_limited": "Korlátozott",
   "resumeLanguage_elementary": "Elemi",
-  "resumeSkills_programmingLanguages": "Programozói nyelvek: ",
-  "resumeSkills_frameworks": "Keretrendszerek: ",
-  "resumeSkills_other": "Egyéb: ",
+  "resumeSkills_programmingLanguages": "Programozói nyelvek",
+  "resumeSkills_frameworks": "Keretrendszerek",
+  "resumeSkills_other": "Egyéb",
   "resumeExperience_profession": "Szakmai",
   "resumeExperience_language": "Nyelvi",
   "resumeHobbies_hobbies": "Hobbik: "
