@@ -5,8 +5,7 @@
     <div class="row">
         <h5><i class="em @Language.Emoji"></i></h5>
         <div class="max">
-            <h6>@Language.Name</h6>
-            <p class="@LevelColorClassCss">@Language.Level</p>
+            <h6>@Language.Name <a class="chip border @LevelColorClassCss">@Language.Level</a></h6>
         </div>
     </div>
 }
@@ -17,7 +16,7 @@ else
 @code {
     I18nText.Website _website = new();
     
-    public string LevelColorClassCss = "grey-text";
+    public string LevelColorClassCss = "grey-border";
     
     [Parameter]
     public ResumeLanguageModel? Language { get; set; }
@@ -30,12 +29,12 @@ else
     protected override void OnParametersSet()
     {
         if (Language == null) return;
-        if (Language.Level == _website.resumeLanguage_native) { LevelColorClassCss = "light-green-text"; return;}
-        if (Language.Level == _website.resumeLanguage_fluent) { LevelColorClassCss = "light-green-text"; return; }
-        if (Language.Level == _website.resumeLanguage_professional) { LevelColorClassCss = "yellow-text"; return; }
-        if (Language.Level == _website.resumeLanguage_conversational) { LevelColorClassCss = "orange-text"; return; }
-        if (Language.Level == _website.resumeLanguage_limited) { LevelColorClassCss = "amber-text"; return; }
-        if (Language.Level == _website.resumeLanguage_elementary) { LevelColorClassCss = "pink-text"; return; }
-        LevelColorClassCss = "grey-text";
+        if (Language.Level == _website.resumeLanguage_native) { LevelColorClassCss = "light-green-border"; return;}
+        if (Language.Level == _website.resumeLanguage_fluent) { LevelColorClassCss = "light-green-border"; return; }
+        if (Language.Level == _website.resumeLanguage_professional) { LevelColorClassCss = "yellow-border"; return; }
+        if (Language.Level == _website.resumeLanguage_conversational) { LevelColorClassCss = "orange-border"; return; }
+        if (Language.Level == _website.resumeLanguage_limited) { LevelColorClassCss = "amber-border"; return; }
+        if (Language.Level == _website.resumeLanguage_elementary) { LevelColorClassCss = "pink-border"; return; }
+        LevelColorClassCss = "grey-border";
     }
 }
