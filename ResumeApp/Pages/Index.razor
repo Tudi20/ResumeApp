@@ -16,7 +16,7 @@ else
     <PageTitle>@_website.index_resumeOf@ResumeData.Basics.Name</PageTitle>
     <ResumeBasics Basics="ResumeData.Basics" />
     <article>
-        <details>
+        <details open>
             <ResumeListDetailsSummary Icon="school" Title="@_website.index_education" />
             <div>
                 @foreach (var education in ResumeData.Education)
@@ -29,7 +29,7 @@ else
     @if (ResumeData.Certificates != null)
     {
         <article>
-            <details>
+            <details open>
                 <ResumeListDetailsSummary Icon="card_membership" Title="@_website.index_certificates"/>
                 <div>
                     @foreach (var certificate in ResumeData.Certificates)
@@ -45,7 +45,7 @@ else
         <!-- Certifications are not available -->
     }
     <article>
-        <details>
+        <details open>
             <ResumeListDetailsSummary Icon="language" Title="@_website.index_languages" />
             <div>
                 @foreach (var language in ResumeData.Languages)
@@ -58,7 +58,7 @@ else
     @if (ResumeData.Skills != null)
     {
         <article>
-            <details>
+            <details open>
                 <ResumeListDetailsSummary Icon="book" Title="@_website.index_skills" />
                 <div>
                     <ResumeSkills Skills="@ResumeData.Skills" />
@@ -73,7 +73,7 @@ else
     @if (ResumeData.Experience != null)
     {
         <article>
-            <details>
+            <details open>
                 <ResumeListDetailsSummary Icon="stars" Title="@_website.index_experience" />
                 <div>
                     <ResumeExperience Experience="@ResumeData.Experience" />
@@ -88,7 +88,7 @@ else
     @if (ResumeData.Hobbies != null)
     {
         <article>
-            <details>
+            <details open>
                 <ResumeListDetailsSummary Icon="interests" Title="@_website.index_hobbies" />
                 <div>
                     <ResumeHobbies Hobbies="@ResumeData.Hobbies" HobbiesIcons="@ResumeData.HobbiesIcons"/>
