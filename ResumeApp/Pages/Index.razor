@@ -15,56 +15,61 @@ else
 {
     <PageTitle>@_website.index_resumeOf@ResumeData.Basics.Name</PageTitle>
     <ResumeBasics Basics="ResumeData.Basics" />
-    <article>
+    <div class="medium-space"></div>
+    <div>
         <details open>
             <ResumeListDetailsSummary Icon="school" Title="@_website.index_education" />
-            <div>
+            <div class="small-margin">
                 @foreach (var education in ResumeData.Education)
                 {
                     <ResumeEducation Education="education" />
                 }
             </div>
         </details>
-    </article>
+    </div>
+    <div class="medium-space"></div>
     @if (ResumeData.Certificates != null)
     {
-        <article>
+        <div>
             <details open>
                 <ResumeListDetailsSummary Icon="card_membership" Title="@_website.index_certificates"/>
-                <div>
+                <div class="small-margin">
                     @foreach (var certificate in ResumeData.Certificates)
                     {
                         <ResumeCertification Certification="certificate" />
                     }
                 </div>
             </details>
-        </article>
+        </div>
+        <div class="medium-space"></div>
     }
     else
     {
         <!-- Certifications are not available -->
     }
-    <article>
+    <div>
         <details open>
             <ResumeListDetailsSummary Icon="language" Title="@_website.index_languages" />
-            <div>
+            <div class="small-margin">
                 @foreach (var language in ResumeData.Languages)
                 {
                     <ResumeLanguage Language="language" />
                 }
             </div>
         </details>
-    </article>
+    </div>
+    <div class="medium-space"></div>
     @if (ResumeData.Skills != null)
     {
-        <article>
+        <div>
             <details open>
                 <ResumeListDetailsSummary Icon="book" Title="@_website.index_skills" />
-                <div>
+                <div class="small-margin">
                     <ResumeSkills Skills="@ResumeData.Skills" />
                 </div>
             </details>
-        </article>
+        </div>
+        <div class="medium-space"></div>
     }
     else
     {
@@ -72,14 +77,15 @@ else
     }
     @if (ResumeData.Experience != null)
     {
-        <article>
+        <div>
             <details open>
                 <ResumeListDetailsSummary Icon="stars" Title="@_website.index_experience" />
-                <div>
+                <div class="small-margin">
                     <ResumeExperience Experience="@ResumeData.Experience" />
                 </div>
             </details>
-        </article>
+        </div>
+        <div class="medium-space"></div>
     }
     else
     {
@@ -87,14 +93,15 @@ else
     }
     @if (ResumeData.Hobbies != null)
     {
-        <article>
+        <div class="">
             <details open>
                 <ResumeListDetailsSummary Icon="interests" Title="@_website.index_hobbies" />
                 <div>
                     <ResumeHobbies Hobbies="@ResumeData.Hobbies" HobbiesIcons="@ResumeData.HobbiesIcons"/>
                 </div>
             </details>
-        </article>
+        </div>
+        <div class="medium-space"></div>
     }
 }
 @code {
