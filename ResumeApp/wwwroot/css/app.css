@@ -1,5 +1,7 @@
-﻿html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body {
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
