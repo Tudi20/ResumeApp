@@ -13,7 +13,7 @@
       "graduated": true,
       "startDate": "2019-09-01",
       "endDate": "2022-09-16",
-      "description": "I have taken courses in C, C#, HTML, CSS, JS, SQL, and more. As my Thesis I have partially ported HTML5 Canvas from JS to C. I have branched into Web Technologies."
+      "description": "As my thesis, I have partially ported HTML5 Canvas from JS to C. I have also became proficient in web technologies."
     },
     {
       "school": "Andrássy Gyula Vocational High School",
@@ -21,7 +21,7 @@
       "graduated": true,
       "startDate": "2015-09-01",
       "endDate": "2019-06-21",
-      "description": "I have taken courses in C# (CLI, WinForms), HTML, CSS, SQL, and more.<br /> I have created a basic website in PHP, which can be found at <a href='https://users.atw.hu/kapszy-ttki' target='_blank'>https://users.atw.hu/kapszy-ttki</a>. To login as a guest use <code>guest@example.com</code> and <code>guest001</code> as login credentials."
+      "description": "My education included C# programming (CLI, WinForms). I have received Vocational Matura (computer system maintenance). I also did web development in PHP at <a href='http://users.atw.hu/kapszy-ttki/' target='_blank'>http://users.atw.hu/kapszy-ttki/</a>. You can login with guest account: <code>guest@example.com</code> / <code>guest001</code>"
     },
     {
       "school": "Saint Francis of Assisi Roman Catcholic Primary School of Diósgyőr",
@@ -29,7 +29,7 @@
       "graduated": true,
       "startDate": "2007-06-01",
       "endDate": "2015-06-15",
-      "description": "I have taken extra-curricular classes in Pascal, Imagine Logo, PHP, HTML, CSS, and SQL. Furthermore I have partaken in competetions."
+      "description": "I participated in IT extra-curricular classes, where I learned programming in Pascal, participated in competitions, completed the ECDL Standard certification."
     }
   ],
   "certificates": [
@@ -120,8 +120,8 @@
     ]
   },
   "experience": {
-    "profession": "My software and contributions written during my studies and as a hobby are available at <a href='https://github.com/tudi20'>gihub.com/tudi20</a>. Examples include a tutorial-based web application using MS-SQL, ASP.NET and Angular technologies. You can also find Pascal programs written for a primary school competition.",
-    "language": "I've been learning English since primary school, and I achieved fluency by watching videos on YouTube and chatting online. I've also helped with community projects on Crowdin. These include the Discord communication platform and most recently the osu! rhythm video game."
+    "profession": "My software and contributions can be found on <a href='https://github.com/tudi20'>my GitHub page</a>. Examples include a tutorial-based web application using MS-SQL, ASP.NET and Angular. Also, Pascal programs written for a primary school competition.",
+    "language": "Fluent in English, achieved through self-study (watching videos on YouTube, chatting online) and helping with community translation projects on Crowdin (including Discord and osu!). Passed a B2 language exam as part of my degree."
   },
   "hobbies": [
     "1-man Software Development",

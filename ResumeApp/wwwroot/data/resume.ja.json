@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Kláben Szabolcs Bence",
-    "label": "ソフトウェア開発者、ウェブサイト開発者、ソフトウェアテスター、またはDevOpsの仕事を探している。",
+    "label": "ソフトウェア開発者、ウェブ開発者、テストオペレーター、またはDevOpsでの仕事を探している。",
     "picture": "pictures/pfp.jpg",
     "email": "contact@tudi20.dev",
     "birthDate": "2000-05-20"
@@ -13,7 +13,7 @@
       "graduated": true,
       "startDate": "2019-09-01",
       "endDate": "2022-09-16",
-      "description": "C、C#、HTML、CSS、JS、SQLなどのコースを受講してきました。卒業論文では、HTML5 CanvasをJSからCに部分的に移植しました。"
+      "description": "卒論では、HTML5 CanvasをJSからCに部分的に移植し、Web技術にも習熟しました。"
     },
     {
       "school": "アンドラーシ・ジュラ職業高等学校",
@@ -21,7 +21,7 @@
       "graduated": true,
       "startDate": "2015-09-01",
       "endDate": "2019-06-21",
-      "description": "C# (CLI、WinForms)、HTML、CSS、SQLなどのコースを受講したことがあります。<br /> PHPで基本的なウェブサイトを作成したことがあり、そのサイトは<a href='https://users.atw.hu/kapszy-ttki' target='_blank'>https://users.atw.hu/kapszy-ttki</a>。 ゲストとしてログインするには、ログイン認証として <code>guest@example.com</code>と<code>guest001</code>を使用します。"
+      "description": "C# プログラミング（CLI、WinForms）を学びました。Vocational Matura (コンピュータシステムメンテナンス)を取得しました。また、<a href='http://users.atw.hu/kapszy-ttki/'>http://users.atw.hu/kapszy-ttki/</a>、PHPでWeb開発をしました。ゲストアカウントでログインすることができます: <code>guest@example.com</code> / <code>guest001</code>"
     },
     {
       "school": "Diósgyőrのアシジローマカトリック小学校の聖フランシスコ",
@@ -29,7 +29,7 @@
       "graduated": true,
       "startDate": "2007-06-01",
       "endDate": "2015-06-15",
-      "description": "Pascal、Imagine Logo、PHP、HTML、CSS、SQLの課外授業を受けたことがあります。さらに、コンペティションにも参加したことがあります。"
+      "description": "ITの課外授業に参加し、Pascalでプログラミングを学び、大会に参加し、ECDL Standardの資格を取得しました。"
     }
   ],
   "certificates": [
@@ -120,8 +120,8 @@
     ]
   },
   "experience": {
-    "profession": "私の研究中や趣味で書いたソフトウェアや寄稿は、<a href='https://github.com/tudi20'>gihub.com/tudi20</a> で公開されています。例として、MS-SQL、ASP.NET、Angularの技術を使ったチュートリアルベースのWebアプリケーションを紹介します。また、小学校のコンクールのために書かれたPascalのプログラムも見つけることができます。",
-    "language": "私は小学生の頃から英語を習っており、YouTubeで動画を見たり、オンラインでチャットをしたりして流暢に話せるようになりました。また、Crowdinの複数のコミュニティプロジェクトを手伝ったこともありました。例えば、コミュニケーション・プラットフォーム「Discord」や、最近ではリズムゲーム「osu!」などがそうです。"
+    "profession": "私のソフトウェアと貢献は、<a href='https://github.com/tudi20'>私のGitHubページ</a>で見ることができます。例えば、MS-SQL、ASP.NET、Angularを使ったチュートリアルベースのWebアプリケーションなどです。また、小学校のコンテストのために書かれたPascalのプログラムもあります。",
+    "language": "英語は、独学（YouTubeで動画を見たり、オンラインでチャットしたり）とCrowdin（Discordやosu！を含む）のコミュニティ翻訳プロジェクトの手伝いを通じて流暢になりました。学位取得の一環として、B2レベルの語学試験に合格しました。"
   },
   "hobbies": [
     "1人のソフトウェア開発",

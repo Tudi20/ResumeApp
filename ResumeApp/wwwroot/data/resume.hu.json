@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Kláben Szabolcs Bence",
-    "label": "Munkát keresek szoftverfejlesztőként, webfejlesztőként, szoftvertesztelőként, vagy akár DevOpsként.",
+    "label": "Nyitott vagyok szoftverfejlesztő, webfejlesztő, szoftvertesztelő, vagy akár DevOps pozícióra.",
     "picture": "pictures/pfp.jpg",
     "email": "contact@tudi20.dev",
     "birthDate": "2000-05-20"
@@ -13,7 +13,7 @@
       "graduated": true,
       "startDate": "2019-09-01",
       "endDate": "2022-09-16",
-      "description": "Tanfolyamokat végeztem C, C#, HTML, CSS, JS, SQL és sok más nyelveken. Szakdolgozatomként részben portoltam a HTML5 Canvas-t JS-ből C-re. Webes technológiákat választottam választható kötelezőként."
+      "description": "Szakdolgozatként a Canvas JS keretrendszert ültettem át C nyelvre. Továbbá webes technológiákban is ismeretes lettem."
     },
     {
       "school": "Andrássy Gyula Szakgimnázium",
@@ -21,7 +21,7 @@
       "graduated": true,
       "startDate": "2015-09-01",
       "endDate": "2019-06-21",
-      "description": "Tanfolyamokat végeztem C# (CLI, WinForms), HTML, CSS, SQL és más területeken.<br /> Készítettem egy alapszintű weboldalt PHP-ben, amely megtalálható a <a href='https://users.atw.hu/kapszy-ttki' target='_blank'>https://users.atw.hu/kapszy-ttki</a> weboldalon. Vendégként történő bejelentkezéshez használható a <code>guest@example.com</code> és <code>guest001</code> bejelentkezési azonosítóként."
+      "description": "Az oktatásom C# programozás (CLI, WinForms) volt. Szakmai érettségit (számítógépes rendszerkarbantartó) kaptam. Továbbá csináltam webfejlesztés PHP-ban az <a href='http://users.atw.hu/kapszy-ttki/' target='_blank'>http://users.atw.hu/kapszy-ttki/</a> oldalon. Beléphetsz a következő vendégfiókkal: <code>guest@example.com</code> / <code>guest001</code>."
     },
     {
       "school": "Diósgyőri Szent Ferenc Római Katolikus Általános Iskola",
@@ -29,7 +29,7 @@
       "graduated": true,
       "startDate": "2007-06-01",
       "endDate": "2015-06-15",
-      "description": "Tanórán kívüli órákat vettem Pascal, Imagine Logo, PHP, HTML, CSS és SQL nyelvből. Továbbá részt vettem versenyeken."
+      "description": "Informatika szakkörön vettem részt, ahol Pascal programozást, versenyeken vettem részt, és letettem a 7 elemű ECDL vizsgát."
     }
   ],
   "certificates": [
@@ -120,8 +120,8 @@
     ]
   },
   "experience": {
-    "profession": "A tanulmányaim alatt és hobbiból megírt szoftverjeim és hozzájárúlásaim megtekinthetőek a <a href='https://github.com/tudi20'>gihub.com/tudi20</a> oldalon. Ilyen például egy útmutató alapján készített webalkalmazás MS-SQL, ASP.NET és Angular technológiákat alkalmazva. Továbbá itt megtalálhatóak az általános iskolás versenyre írt Pascal programok is.",
-    "language": "Általános iskola óta tanulok angolul, a folyékonyságot YouTube-on való videók nézésével és az interneten való csevegéssel értem el. Fordítási közösségi projektekben is segítettem már Crowdinon. Ilyen volt például a Discord kommunikációs platform, és legutoljára az osu! ritmus videójáték."
+    "profession": "Szoftverjeim és hozzájárulásaim megtekinthetőek a <a href='https://github.com/tudi20'> GitHub oldalamon</a>. Például egy útmutató alapján készített webalkalmazás MS-SQL, ASP.NET és Angular technológiákat alkalmazva. Továbbá itt megtalálhatóak az általános iskolás versenyre írt Pascal programok is.",
+    "language": "Folyékonyságot YouTube-on való videók nézésével és az interneten való csevegéssel értem el. Fordítási közösségi projektekben segítettem Crowdinon (például Discord és osu!). A diplomához B2-es nyelvvizsgát tettem le."
   },
   "hobbies": [
     "Egyszemélyes szoftverfejlesztés",
