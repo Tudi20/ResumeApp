@@ -1,27 +1,21 @@
 ﻿@inject Toolbelt.Blazor.I18nText.I18nText I18nText
 @inject HttpClient Http;
+@inject ILogger<FooterComponent> Logger
 
 <footer class="large medium-padding surface-variant center-align responsive">
-    @if (_lastUpdatedText != null)
+    @if (_website.footer_text != null)
     {
-        <p>@_lastUpdatedText</p>
+        <p>@_website.footer_text</p>
     }
     else
     {
-        @if (_website.footer_text != null)
-        {
-            <p>@(_website.footer_text.Replace("$year", DateTime.Now.Year.ToString()))</p>
-        }
-        else
-        {
-            <a class="loader small"></a>
-        }
+        <a class="loader small"></a>
     }
     <a href="https://github.com/Tudi20/ResumeApp" target="_blank">
         <div class="row center-align">
             <img src="pictures/programming-language-logos/github.svg" alt="GitHub"
                  width="15" height="15">
-            <span class="underline max">
+            <span class="underline max primary-text">
                 @if (_website.footer_source != null)
                 {
                     <span>@_website.footer_source</span>
@@ -33,26 +27,61 @@
             </span>
         </div>
     </a>
+    @if (_dynamicCopyrightText != null)
+    {
+        <p>@((MarkupString)_dynamicCopyrightText)</p>
+    }
+    else
+    {
+        <a class="loader small"></a>
+    }
     <!-- Add spacing on bottom when on small screen for the nav bar -->
     <div class="s" style="margin-bottom: 80rem;"></div>
 </footer>
 
 @code {
     I18nText.Website _website = new();
-    string? _lastUpdatedText;
+    string? _dynamicCopyrightText;
+    private CommitsResult? _lastCommit;
+    private ResumeModel? _resumeData;
 
     protected override async Task OnInitializedAsync()
     {
         _website = await I18nText.GetTextTableAsync<I18nText.Website>(this);
-        if (_website == null) return;
-        var lastCommit = await Http.GetFromJsonAsync<CommitsResult>(
+        _lastCommit = await Http.GetFromJsonAsync<CommitsResult>(
             "https://api.github.com/repos/Tudi20/ResumeApp/commits/master");
+        var lang = await I18nText.GetCurrentLanguageAsync();
+        _resumeData = await Http.GetFromJsonAsync<ResumeModel>($"data/resume.{lang.Split('-')[0]}.json");
+        I18nText.ChangeLanguage += async (s, a) => await UpdateDynamicCopyrightText(this, _lastCommit, _resumeData);
+        await UpdateDynamicCopyrightText(this, _lastCommit, _resumeData);
+    }
+    
+    private async Task UpdateDynamicCopyrightText(FooterComponent footer, CommitsResult? lastCommit, ResumeModel? resumeData)
+    {
         if (lastCommit != null)
         {
-            _lastUpdatedText = 
-                _website.footer_text.Replace("$year",
-                    "2022-" + lastCommit.Commit.Author.Date.Year);
+            _dynamicCopyrightText =
+                _website.footer_copyright.Replace("$year",
+                    "2022-<a href='" + lastCommit.Commit.Url + "' target='_blank' class='underline primary-text' style='vertical-align:revert;'>" + lastCommit.Commit.Author.Date.Year + "</a>");
         }
-        
+        else
+        {
+            Logger.LogWarning("Failed to get the last commit date from GitHub, showing last year instead.");
+            _dynamicCopyrightText = _website.footer_copyright.Replace("$year", "2022-" + DateTime.Now.Year);
+        }
+
+        _dynamicCopyrightText = _dynamicCopyrightText.Replace("$program", _website.footer_appName);
+
+
+        if (resumeData != null)
+        {
+            _dynamicCopyrightText = _dynamicCopyrightText.Replace("$author", resumeData.Basics.Name);
+        }
+        else
+        {
+            Logger.LogWarning("Resume data failed to load, copyright notice showing hard-coded value.");
+            _dynamicCopyrightText = _dynamicCopyrightText.Replace("$author", "Tudi20");
+        }
+        await InvokeAsync(footer.StateHasChanged);
     }
 }
